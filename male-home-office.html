@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Małe biurko — jak stworzyć wygodne miejsce do pracy? | 1000Rays</title>
+
+<meta name="description" content="Jak urządzić małe home office? Praktyczne sposoby na wygodne biurko, przechowywanie kabli, organizację sprzętu i oszczędzanie miejsca.">
+
+<style>
+
+:root {
+    --navy: #0f172a;
+    --blue: #38bdf8;
+    --blue-dark: #0284c7;
+    --blue-light: #e0f2fe;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text: #172033;
+    --gray: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.back {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.back:hover {
+    color: var(--blue);
+}
+
+
+/* ARTICLE */
+
+.article-page {
+    padding: 70px 0 100px;
+}
+
+.category {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 45px;
+    max-width: 760px;
+}
+
+.hero-image {
+    height: 320px;
+    background: linear-gradient(135deg, #dff7ff, #eef6ff);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-bottom: 55px;
+}
+
+.article-content {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.article-content h2 {
+    color: var(--navy);
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 45px 0 18px;
+}
+
+.article-content h2:first-child {
+    margin-top: 0;
+}
+
+.article-content p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+
+/* TIP */
+
+.tip {
+    background: var(--blue-light);
+    border-left: 5px solid var(--blue-dark);
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.tip strong {
+    color: var(--navy);
+}
+
+
+/* IDEAS */
+
+.idea {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 25px 0 35px;
+}
+
+.idea-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.number {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.idea h3 {
+    color: var(--navy);
+    font-size: 21px;
+    margin: 0;
+}
+
+.idea p {
+    margin-bottom: 10px;
+}
+
+.best {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.best strong {
+    color: var(--navy);
+}
+
+
+/* CHECKLIST */
+
+.checklist {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.checklist p {
+    margin-bottom: 10px;
+}
+
+.checklist p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 40px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .article-page {
+        padding: 45px 0 70px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        height: 230px;
+        font-size: 75px;
+    }
+
+    .article-content {
+        padding: 27px 22px;
+    }
+
+    .article-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="container nav">
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="logo">
+
+1000<span>Rays</span>
+
+</a>
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="back">
+
+← Strona główna
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+<div class="container article-page">
+
+
+<div class="category">
+MAŁE HOME OFFICE
+</div>
+
+
+<h1>
+Małe biurko — jak stworzyć wygodne miejsce do pracy?
+</h1>
+
+
+<p class="intro">
+
+Nie potrzebujesz osobnego pokoju,
+żeby stworzyć wygodne miejsce do pracy.
+Nawet mały kawałek ściany może
+zamienić się w całkiem konkretne
+home office.
+
+</p>
+
+
+<div class="hero-image">
+💻
+</div>
+
+
+<div class="article-content">
+
+
+<h2>
+Najważniejsza zasada: biurko nie musi być duże
+</h2>
+
+
+<p>
+
+W małym mieszkaniu ogromne biurko
+często jest po prostu stratą przestrzeni.
+
+Jeżeli pracujesz głównie na laptopie,
+do wygodnego stanowiska może wystarczyć
+znacznie mniejszy blat.
+
+</p>
+
+
+<div class="tip">
+
+<strong>💡 Tip 1000Rays:</strong>
+
+Najpierw określ, czego naprawdę
+potrzebujesz na biurku.
+Laptop + monitor + kubek to zupełnie
+inna sytuacja niż pełny komputer,
+drukarka i mnóstwo akcesoriów.
+
+</div>
+
+
+
+<h2>
+10 sposobów na małe home office
+</h2>
+
+
+<!-- 1 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">1</div>
+
+<h3>
+Wybierz wąskie biurko
+</h3>
+
+</div>
+
+<p>
+
+W małym mieszkaniu szerokość biurka
+często jest ważniejsza niż jego długość.
+
+Wąski blat może wystarczyć do laptopa,
+klawiatury i najważniejszych rzeczy.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+osób pracujących głównie na laptopie.
+
+</div>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">2</div>
+
+<h3>
+Wykorzystaj ścianę
+</h3>
+
+</div>
+
+<p>
+
+Nad biurkiem można zamontować półki,
+tablicę organizacyjną albo niewielki
+system przechowywania.
+
+Dzięki temu blat pozostaje wolny.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+małych stanowisk bez dodatkowych szafek.
+
+</div>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">3</div>
+
+<h3>
+Schowaj kable
+</h3>
+
+</div>
+
+<p>
+
+Kable potrafią zrobić z małego biurka
+totalny chaos.
+
+Proste uchwyty, opaski i organizery
+pomagają poprowadzić je w jednym miejscu.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+stanowisk z monitorem i większą liczbą urządzeń.
+
+</div>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">4</div>
+
+<h3>
+Użyj podstawki pod laptopa
+</h3>
+
+</div>
+
+<p>
+
+Podstawka może podnieść ekran
+do wygodniejszej wysokości.
+
+Dodatkowo pod laptopem zostaje
+trochę wolnego miejsca.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+pracy na laptopie przez wiele godzin.
+
+</div>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">5</div>
+
+<h3>
+Monitor na ramieniu
+</h3>
+
+</div>
+
+<p>
+
+Jeżeli korzystasz z monitora,
+ramię mocowane do biurka może
+zwolnić sporo miejsca na blacie.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+małych biurek z dodatkowym monitorem.
+
+</div>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">6</div>
+
+<h3>
+Półka nad monitorem
+</h3>
+
+</div>
+
+<p>
+
+Przestrzeń nad ekranem również
+można wykorzystać.
+
+Niewielka półka może pomieścić
+notatnik, książki albo drobne akcesoria.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+osób potrzebujących dodatkowego przechowywania.
+
+</div>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">7</div>
+
+<h3>
+Szuflada zamiast kolejnej szafki
+</h3>
+
+</div>
+
+<p>
+
+Jeżeli biurko nie ma szuflady,
+możesz wykorzystać niewielki
+organizer podblatowy.
+
+Najważniejsze drobiazgi nie będą
+wtedy zajmowały powierzchni roboczej.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+małych blatów.
+
+</div>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">8</div>
+
+<h3>
+Składane biurko
+</h3>
+
+</div>
+
+<p>
+
+Jeżeli pracujesz tylko okazjonalnie,
+składany blat może być świetnym
+rozwiązaniem.
+
+Po zakończeniu pracy możesz
+odzyskać całą przestrzeń.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+bardzo małych mieszkań.
+
+</div>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">9</div>
+
+<h3>
+Wielofunkcyjne krzesło
+</h3>
+
+</div>
+
+<p>
+
+Jeśli nie masz miejsca na dodatkowy
+fotel czy fotelik, wybierz wygodne
+krzesło, które może pełnić kilka funkcji.
+
+Nie musi cały czas wyglądać jak
+typowe krzesło biurowe.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+salonów połączonych z miejscem pracy.
+
+</div>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">10</div>
+
+<h3>
+Zostaw pustą powierzchnię
+</h3>
+
+</div>
+
+<p>
+
+To może brzmieć dziwnie, ale nie
+zapełniaj każdego centymetra.
+
+Wolna przestrzeń sprawia, że małe
+stanowisko wygląda znacznie lepiej
+i łatwiej utrzymać na nim porządek.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+każdego małego home office.
+
+</div>
+
+</div>
+
+
+
+<h2>
+Jak zorganizować małe biurko?
+</h2>
+
+
+<p>
+
+Dobre stanowisko pracy powinno mieć
+jedną prostą zasadę:
+
+rzeczy, których używasz najczęściej,
+muszą być najłatwiej dostępne.
+
+</p>
+
+
+<div class="checklist">
+
+<p>
+💻 Laptop / monitor
+→ centralnie przed Tobą.
+</p>
+
+<p>
+⌨️ Klawiatura i mysz
+→ bezpośrednio przed miejscem pracy.
+</p>
+
+<p>
+📝 Notatnik
+→ pod ręką, ale nie na środku blatu.
+</p>
+
+<p>
+🔌 Kable
+→ prowadzone jednym kanałem.
+</p>
+
+<p>
+📦 Rzadko używane rzeczy
+→ na półce lub poza biurkiem.
+</p>
+
+</div>
+
+
+
+<h2>
+Małe home office może być naprawdę wygodne
+</h2>
+
+
+<p>
+
+Największym błędem jest próba stworzenia
+miniaturowej wersji dużego biura.
+
+Nie potrzebujesz ogromnego blatu,
+wielu szafek i dziesięciu akcesoriów.
+
+Potrzebujesz tylko dobrze wykorzystanej
+przestrzeni.
+
+</p>
+
+
+<p>
+
+Wąskie biurko, kilka organizerów,
+dobrze poprowadzone kable i
+wykorzystanie ściany mogą wystarczyć,
+żeby stworzyć wygodne miejsce
+do codziennej pracy.
+
+</p>
+
+
+<div class="tip">
+
+<strong>🔥 Prosta zasada:</strong>
+
+Jeśli jakiś przedmiot nie jest używany
+codziennie, nie musi zajmować
+najlepszego miejsca na biurku.
+
+</div>
+
+
+
+<h2>
+Podsumowanie
+</h2>
+
+
+<p>
+
+Małe home office nie musi oznaczać
+niewygodnej pracy.
+
+Kluczem jest wykorzystanie pionowej
+przestrzeni, ograniczenie liczby rzeczy
+na blacie i dobre zarządzanie kablami.
+
+</p>
+
+
+<p>
+
+Najpierw ustaw podstawy.
+
+Dopiero później dodawaj kolejne
+akcesoria.
+
+W małym mieszkaniu każdy centymetr
+ma znaczenie. 😎
+
+</p>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<div class="container footer-inner">
+
+
+<div>
+
+<div class="footer-logo">
+1000Rays
+</div>
+
+<small>
+Sprytne rozwiązania do małych przestrzeni.
+</small>
+
+</div>
+
+
+<a
+href="https://1000lrays.github.io/1000Rays/">
+
+← Wróć do 1000Rays
+
+</a>
+
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
