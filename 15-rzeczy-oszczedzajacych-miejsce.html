@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>15 rzeczy, które oszczędzają miejsce w małym mieszkaniu | 1000Rays</title>
+
+<meta name="description" content="15 praktycznych rzeczy, które pomagają zaoszczędzić miejsce w małym mieszkaniu. Organizacja kuchni, łazienki, sypialni i codziennej przestrzeni.">
+
+<style>
+
+:root {
+    --navy: #0f172a;
+    --blue: #38bdf8;
+    --blue-dark: #0284c7;
+    --blue-light: #e0f2fe;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text: #172033;
+    --gray: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.back {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.back:hover {
+    color: var(--blue);
+}
+
+
+/* ARTICLE */
+
+.article-page {
+    padding: 70px 0 100px;
+}
+
+.category {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 45px;
+    max-width: 760px;
+}
+
+.hero-image {
+    height: 320px;
+    background: linear-gradient(135deg, #dff5ff, #eff6ff);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-bottom: 55px;
+}
+
+.article-content {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.article-content h2 {
+    color: var(--navy);
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 45px 0 18px;
+}
+
+.article-content h2:first-child {
+    margin-top: 0;
+}
+
+.article-content h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin: 30px 0 10px;
+}
+
+.article-content p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+.article-content ul {
+    margin: 15px 0 25px 25px;
+    color: #475569;
+}
+
+.article-content li {
+    margin-bottom: 10px;
+}
+
+.tip {
+    background: var(--blue-light);
+    border-left: 5px solid var(--blue-dark);
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.tip strong {
+    color: var(--navy);
+}
+
+.product-box {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.product-box strong {
+    color: var(--navy);
+    font-size: 19px;
+}
+
+.number {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.note {
+    background: #f1f5f9;
+    padding: 22px;
+    border-radius: 12px;
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 40px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .article-page {
+        padding: 45px 0 70px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        height: 230px;
+        font-size: 75px;
+    }
+
+    .article-content {
+        padding: 27px 22px;
+    }
+
+    .article-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="logo">
+
+1000<span>Rays</span>
+
+</a>
+
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="back">
+
+← Strona główna
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- ARTICLE -->
+
+<main>
+
+<div class="container article-page">
+
+
+<div class="category">
+ORGANIZACJA MAŁEGO MIESZKANIA
+</div>
+
+
+<h1>
+15 rzeczy, które oszczędzają miejsce w małym mieszkaniu
+</h1>
+
+
+<p class="intro">
+
+Małe mieszkanie potrafi być naprawdę wygodne.
+Problem zaczyna się wtedy, gdy każdy przedmiot
+zaczyna walczyć o własny kawałek podłogi.
+
+Na szczęście istnieje sporo prostych rozwiązań,
+które pozwalają odzyskać trochę przestrzeni
+bez przeprowadzania remontu.
+
+</p>
+
+
+<div class="hero-image">
+📦
+</div>
+
+
+<div class="article-content">
+
+
+<h2>
+Od czego zacząć?
+</h2>
+
+
+<p>
+
+Największym błędem w małym mieszkaniu jest
+próba upchnięcia wszystkiego w przypadkowych miejscach.
+
+Zamiast tego warto wykorzystać przestrzeń,
+która często pozostaje niewykorzystana:
+ściany, drzwi, przestrzeń pod łóżkiem,
+wnętrza szafek czy miejsce nad blatami.
+
+</p>
+
+
+<div class="tip">
+
+<strong>💡 Zasada 1000Rays:</strong>
+
+Zanim kupisz kolejny mebel,
+sprawdź, czy możesz lepiej wykorzystać
+przestrzeń, którą już masz.
+
+</div>
+
+
+
+<h2>
+15 prostych rozwiązań
+</h2>
+
+
+<h3>
+<span class="number">1</span>
+Organizery do szuflad
+</h3>
+
+<p>
+
+Dzięki przegródkom mała szuflada może pomieścić
+znacznie więcej rzeczy i jednocześnie pozostawać uporządkowana.
+
+Szczególnie dobrze sprawdzają się w kuchni,
+łazience i przy przechowywaniu drobnych akcesoriów.
+
+</p>
+
+
+<h3>
+<span class="number">2</span>
+Pojemniki ustawiane jeden na drugim
+</h3>
+
+<p>
+
+Zamiast zajmować powierzchnię obok siebie,
+wykorzystuj wysokość.
+
+Pojemniki modułowe pozwalają wykorzystać
+pionową przestrzeń w szafkach.
+
+</p>
+
+
+<h3>
+<span class="number">3</span>
+Półka nad drzwiami
+</h3>
+
+<p>
+
+Przestrzeń nad drzwiami często pozostaje całkowicie pusta.
+
+Niewielka półka może być dobrym miejscem
+na ręczniki, książki, zapasy lub rzeczy,
+których nie używasz codziennie.
+
+</p>
+
+
+<h3>
+<span class="number">4</span>
+Haczyki na drzwi
+</h3>
+
+<p>
+
+Drzwi mogą pełnić funkcję dodatkowej przestrzeni
+do przechowywania.
+
+Haczyki sprawdzą się między innymi na kurtki,
+torby, ręczniki czy akcesoria.
+
+</p>
+
+
+<h3>
+<span class="number">5</span>
+Pojemniki pod łóżkiem
+</h3>
+
+<p>
+
+Przestrzeń pod łóżkiem to jeden z najprostszych
+sposobów na przechowywanie rzeczy,
+których nie potrzebujesz każdego dnia.
+
+</p>
+
+
+<h3>
+<span class="number">6</span>
+Składane kosze
+</h3>
+
+<p>
+
+Kiedy kosz nie jest potrzebny,
+można go złożyć.
+
+To szczególnie wygodne w małych łazienkach,
+przedpokojach i garderobach.
+
+</p>
+
+
+<h3>
+<span class="number">7</span>
+Wieszaki wielopoziomowe
+</h3>
+
+<p>
+
+Jeden wieszak może pomieścić kilka elementów garderoby.
+
+To prosty sposób na zwiększenie pojemności
+małej szafy bez kupowania kolejnego mebla.
+
+</p>
+
+
+<h3>
+<span class="number">8</span>
+Magnetyczne organizery
+</h3>
+
+<p>
+
+Magnetyczne pojemniki mogą wykorzystać
+metalowe powierzchnie, które normalnie
+nie służą do przechowywania.
+
+</p>
+
+
+<h3>
+<span class="number">9</span>
+Półki narożne
+</h3>
+
+<p>
+
+Narożniki są często trudne do wykorzystania.
+
+Mała półka narożna może jednak stworzyć
+dodatkowe miejsce na kosmetyki,
+dekoracje albo akcesoria.
+
+</p>
+
+
+<h3>
+<span class="number">10</span>
+Składany stół
+</h3>
+
+<p>
+
+Jeżeli nie potrzebujesz dużego stołu przez cały dzień,
+składany model może być bardzo praktycznym rozwiązaniem.
+
+Po złożeniu odzyskujesz sporą część przestrzeni.
+
+</p>
+
+
+<h3>
+<span class="number">11</span>
+Wózek na kółkach
+</h3>
+
+<p>
+
+Wąski wózek może zmieścić się nawet
+w niewielkiej szczelinie między meblami.
+
+Można wykorzystać go w kuchni,
+łazience albo jako dodatkowe miejsce
+na akcesoria.
+
+</p>
+
+
+<h3>
+<span class="number">12</span>
+Pojemniki próżniowe na ubrania
+</h3>
+
+<p>
+
+Rzeczy sezonowe nie muszą zajmować
+całej szafy przez cały rok.
+
+Pojemniki próżniowe mogą ograniczyć
+objętość przechowywanych tekstyliów.
+
+</p>
+
+
+<h3>
+<span class="number">13</span>
+Organizer za drzwiami szafki
+</h3>
+
+<p>
+
+Wewnętrzna strona drzwi szafki
+może stać się dodatkowym miejscem
+na małe przedmioty.
+
+To świetne rozwiązanie szczególnie w kuchni.
+
+</p>
+
+
+<h3>
+<span class="number">14</span>
+Składane krzesła
+</h3>
+
+<p>
+
+Jeżeli potrzebujesz dodatkowych miejsc
+do siedzenia tylko czasami,
+składane krzesła można przechowywać
+w niewielkiej przestrzeni.
+
+</p>
+
+
+<h3>
+<span class="number">15</span>
+Półki zwiększające wysokość szafek
+</h3>
+
+<p>
+
+Jeśli w szafce pozostaje dużo wolnej przestrzeni
+nad przechowywanymi przedmiotami,
+dodatkowa półka może praktycznie podwoić
+dostępną powierzchnię.
+
+</p>
+
+
+
+<h2>
+Najważniejsza rzecz?
+</h2>
+
+
+<p>
+
+Nie chodzi o to, żeby kupić piętnaście
+nowych organizerów.
+
+Najpierw zobacz, gdzie naprawdę tracisz przestrzeń.
+
+Czasami wystarczy jeden dodatkowy haczyk,
+jedna półka albo kilka pojemników,
+żeby całkowicie zmienić sposób korzystania
+z małego pomieszczenia.
+
+</p>
+
+
+<div class="product-box">
+
+<strong>
+🛒 A co z produktami?
+</strong>
+
+<p>
+
+W kolejnych materiałach 1000Rays będziemy
+pokazywać konkretne rozwiązania i produkty,
+które mogą pomóc w organizacji małych mieszkań.
+
+</p>
+
+</div>
+
+
+<div class="note">
+
+<strong>
+Uwaga:
+</strong>
+
+Ten artykuł ma charakter informacyjny.
+Przed zakupem konkretnego produktu warto
+sprawdzić jego wymiary, materiały, sposób montażu
+oraz opinie użytkowników.
+
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+
+<div class="footer-logo">
+1000Rays
+</div>
+
+<small>
+Sprytne rozwiązania do małych przestrzeni.
+</small>
+
+</div>
+
+
+<a
+href="https://1000lrays.github.io/1000Rays/">
+
+← Wróć do 1000Rays
+
+</a>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
