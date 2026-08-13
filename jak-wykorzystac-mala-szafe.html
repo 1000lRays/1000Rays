@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>10 sposobów na lepiej wykorzystaną szafę | 1000Rays</title>
+
+<meta name="description" content="10 prostych sposobów na lepsze wykorzystanie małej szafy. Organizacja ubrań, akcesoriów i dodatkowego miejsca do przechowywania.">
+
+<style>
+
+:root {
+    --navy: #0f172a;
+    --blue: #38bdf8;
+    --blue-dark: #0284c7;
+    --blue-light: #e0f2fe;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text: #172033;
+    --gray: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.back {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.back:hover {
+    color: var(--blue);
+}
+
+
+/* ARTICLE */
+
+.article-page {
+    padding: 70px 0 100px;
+}
+
+.category {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 45px;
+    max-width: 760px;
+}
+
+.hero-image {
+    height: 320px;
+    background: linear-gradient(135deg, #e0f2fe, #eef6ff);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-bottom: 55px;
+}
+
+.article-content {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.article-content h2 {
+    color: var(--navy);
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 45px 0 18px;
+}
+
+.article-content h2:first-child {
+    margin-top: 0;
+}
+
+.article-content p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+
+/* TIP */
+
+.tip {
+    background: var(--blue-light);
+    border-left: 5px solid var(--blue-dark);
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.tip strong {
+    color: var(--navy);
+}
+
+
+/* IDEAS */
+
+.idea {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 25px 0 35px;
+}
+
+.idea-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.number {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.idea h3 {
+    color: var(--navy);
+    font-size: 21px;
+    margin: 0;
+}
+
+.idea p {
+    margin-bottom: 10px;
+}
+
+.best {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.best strong {
+    color: var(--navy);
+}
+
+
+/* CHECKLIST */
+
+.checklist {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.checklist p {
+    margin-bottom: 10px;
+}
+
+.checklist p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 40px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .article-page {
+        padding: 45px 0 70px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        height: 230px;
+        font-size: 75px;
+    }
+
+    .article-content {
+        padding: 27px 22px;
+    }
+
+    .article-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="container nav">
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="logo">
+
+1000<span>Rays</span>
+
+</a>
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="back">
+
+← Strona główna
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+<div class="container article-page">
+
+
+<div class="category">
+ORGANIZACJA SZAFY
+</div>
+
+
+<h1>
+10 sposobów na lepiej wykorzystaną szafę
+</h1>
+
+
+<p class="intro">
+
+Mała szafa nie musi oznaczać wiecznej
+walki z ubraniami. Czasem problemem
+nie jest jej rozmiar, tylko sposób,
+w jaki wykorzystujemy dostępną przestrzeń.
+
+</p>
+
+
+<div class="hero-image">
+👕
+</div>
+
+
+<div class="article-content">
+
+
+<h2>
+Zacznij od wykorzystania całej wysokości
+</h2>
+
+
+<p>
+
+Wiele szaf ma sporo niewykorzystanego
+miejsca nad ubraniami.
+
+Zamiast zostawiać pustą przestrzeń,
+warto wykorzystać ją na dodatkowe
+półki, pudełka albo organizery.
+
+</p>
+
+
+<div class="tip">
+
+<strong>💡 Tip 1000Rays:</strong>
+
+Zanim kupisz nową szafę, sprawdź,
+ile przestrzeni w obecnej szafie
+faktycznie pozostaje niewykorzystane.
+
+</div>
+
+
+
+<h2>
+10 sposobów na więcej miejsca
+</h2>
+
+
+<!-- 1 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">1</div>
+
+<h3>
+Wieszaki wielopoziomowe
+</h3>
+
+</div>
+
+<p>
+
+Jeden wieszak może pomieścić kilka
+par spodni, spódnic albo innych ubrań.
+
+Dzięki temu wykorzystujesz wysokość
+szafy zamiast zajmować kolejne miejsce
+na drążku.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+spodni, spódnic i lekkich ubrań.
+
+</div>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">2</div>
+
+<h3>
+Dodatkowa półka
+</h3>
+
+</div>
+
+<p>
+
+Jeśli między półkami zostaje dużo
+wolnego miejsca, dodatkowa półka
+może praktycznie podwoić dostępną
+powierzchnię.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+swetrów, koszulek i składanych ubrań.
+
+</div>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">3</div>
+
+<h3>
+Organizery wiszące
+</h3>
+
+</div>
+
+<p>
+
+Wiszący organizer pozwala stworzyć
+dodatkowe półki bez wiercenia i
+przebudowy szafy.
+
+Możesz przechowywać w nim ubrania,
+torby albo akcesoria.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+małych szaf bez wystarczającej liczby półek.
+
+</div>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">4</div>
+
+<h3>
+Pudełka na górną półkę
+</h3>
+
+</div>
+
+<p>
+
+Górna część szafy często zamienia się
+w miejsce, gdzie wszystko jest wrzucone
+bez ładu i składu.
+
+Pudełka pozwalają wykorzystać tę
+przestrzeń znacznie lepiej.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+ubrań sezonowych i rzadziej używanych rzeczy.
+
+</div>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">5</div>
+
+<h3>
+Wykorzystaj drzwi szafy
+</h3>
+
+</div>
+
+<p>
+
+Wewnętrzna strona drzwi może pomieścić
+drobne akcesoria, paski, czapki,
+biżuterię albo torebki.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+dodatków i małych rzeczy.
+
+</div>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">6</div>
+
+<h3>
+Haczyki na dodatkowe torby
+</h3>
+
+</div>
+
+<p>
+
+Jeżeli masz pustą boczną przestrzeń
+w szafie, kilka haczyków może
+rozwiązać problem z przechowywaniem
+torebek i plecaków.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+torebek, plecaków i lekkich akcesoriów.
+
+</div>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">7</div>
+
+<h3>
+Pionowe składanie ubrań
+</h3>
+
+</div>
+
+<p>
+
+Zamiast układać ubrania w wysokie
+stosiki, spróbuj przechowywać je
+pionowo.
+
+Łatwiej wtedy zobaczyć wszystko
+bez rozwalania całej półki.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+koszulek, bielizny i ubrań codziennych.
+
+</div>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">8</div>
+
+<h3>
+Worki próżniowe
+</h3>
+
+</div>
+
+<p>
+
+Kurtki zimowe, koce i grube ubrania
+mogą zajmować ogromną część szafy.
+
+Worki próżniowe pomagają zmniejszyć
+ich objętość podczas przechowywania.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+rzeczy sezonowych.
+
+</div>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">9</div>
+
+<h3>
+Pojemniki na drobiazgi
+</h3>
+
+</div>
+
+<p>
+
+Małe pudełka lub koszyki pomagają
+wykorzystać przestrzeń, która normalnie
+byłaby trudna do zagospodarowania.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+skarpet, pasków i akcesoriów.
+
+</div>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">10</div>
+
+<h3>
+Rotacja ubrań sezonowych
+</h3>
+
+</div>
+
+<p>
+
+Nie ma sensu zajmować najlepszych
+miejsc w szafie ubraniami, których
+aktualnie nie nosisz.
+
+Latem schowaj zimowe rzeczy,
+a zimą zrób odwrotnie.
+
+</p>
+
+<div class="best">
+
+<strong>Najlepsze dla:</strong>
+małych szaf z ograniczoną przestrzenią.
+
+</div>
+
+</div>
+
+
+
+<h2>
+Jak uporządkować szafę w praktyce?
+</h2>
+
+
+<p>
+
+Najlepiej nie zaczynać od kupowania
+organizerów.
+
+Najpierw wyjmij rzeczy i podziel je
+na kilka prostych kategorii.
+
+</p>
+
+
+<div class="checklist">
+
+<p>
+👕 Rzeczy noszone regularnie
+→ zostaw w łatwo dostępnym miejscu.
+</p>
+
+<p>
+🧥 Ubrania sezonowe
+→ schowaj wyżej lub poza szafą.
+</p>
+
+<p>
+👟 Rzadko używane rzeczy
+→ przełóż do pudeł.
+</p>
+
+<p>
+🎒 Torby i plecaki
+→ wykorzystaj haczyki.
+</p>
+
+<p>
+🧦 Drobne akcesoria
+→ włóż do organizerów.
+</p>
+
+</div>
+
+
+
+<h2>
+Nie każdy centymetr musi być idealny
+</h2>
+
+
+<p>
+
+Organizacja szafy nie polega na tym,
+żeby wszystko wyglądało jak zdjęcie
+z katalogu.
+
+Chodzi o to, żebyś bez problemu
+znajdował rzeczy, których potrzebujesz.
+
+</p>
+
+
+<p>
+
+Jeśli każdego ranka wyciągasz połowę
+zawartości szafy, żeby znaleźć jedną
+koszulkę, system przechowywania
+po prostu nie działa.
+
+</p>
+
+
+<div class="tip">
+
+<strong>🔥 Prosta zasada:</strong>
+
+Najczęściej używane rzeczy trzymaj
+na wysokości oczu i rąk.
+
+Rzadziej używane rzeczy mogą trafić
+wyżej, niżej albo do pojemników.
+
+</div>
+
+
+
+<h2>
+Podsumowanie
+</h2>
+
+
+<p>
+
+Mała szafa może pomieścić zaskakująco
+dużo, jeśli wykorzystasz jej wysokość,
+drzwi, dodatkowe półki i przestrzeń,
+która wcześniej była pusta.
+
+</p>
+
+
+<p>
+
+Nie musisz robić rewolucji.
+
+Zacznij od jednego elementu:
+dodatkowej półki, organizera albo
+wieszaków wielopoziomowych.
+
+Mała zmiana → mniej chaosu → więcej miejsca.
+
+</p>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<div class="container footer-inner">
+
+
+<div>
+
+<div class="footer-logo">
+1000Rays
+</div>
+
+<small>
+Sprytne rozwiązania do małych przestrzeni.
+</small>
+
+</div>
+
+
+<a
+href="https://1000lrays.github.io/1000Rays/">
+
+← Wróć do 1000Rays
+
+</a>
+
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
