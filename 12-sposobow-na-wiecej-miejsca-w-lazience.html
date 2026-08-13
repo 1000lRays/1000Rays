@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>12 sposobów na więcej miejsca w małej łazience | 1000Rays</title>
+
+<meta name="description" content="12 prostych sposobów na lepszą organizację małej łazienki. Praktyczne pomysły na przechowywanie kosmetyków, ręczników i akcesoriów.">
+
+<style>
+
+:root {
+    --navy: #0f172a;
+    --blue: #38bdf8;
+    --blue-dark: #0284c7;
+    --blue-light: #e0f2fe;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text: #172033;
+    --gray: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.back {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.back:hover {
+    color: var(--blue);
+}
+
+
+/* ARTICLE */
+
+.article-page {
+    padding: 70px 0 100px;
+}
+
+.category {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 45px;
+    max-width: 760px;
+}
+
+.hero-image {
+    height: 320px;
+    background: linear-gradient(135deg, #dff7ff, #eff6ff);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-bottom: 55px;
+}
+
+.article-content {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.article-content h2 {
+    color: var(--navy);
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 45px 0 18px;
+}
+
+.article-content h2:first-child {
+    margin-top: 0;
+}
+
+.article-content h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin: 30px 0 10px;
+}
+
+.article-content p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+
+/* TIP */
+
+.tip {
+    background: var(--blue-light);
+    border-left: 5px solid var(--blue-dark);
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.tip strong {
+    color: var(--navy);
+}
+
+
+/* PRODUCT */
+
+.product {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 25px 0 35px;
+}
+
+.product-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.number {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.product h3 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.product p {
+    margin-bottom: 10px;
+}
+
+.good-for {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.good-for strong {
+    color: var(--navy);
+}
+
+
+/* CHECKLIST */
+
+.checklist {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.checklist p {
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 40px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .article-page {
+        padding: 45px 0 70px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        height: 230px;
+        font-size: 75px;
+    }
+
+    .article-content {
+        padding: 27px 22px;
+    }
+
+    .article-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="logo">
+
+1000<span>Rays</span>
+
+</a>
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="back">
+
+← Strona główna
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- ARTICLE -->
+
+<main>
+
+<div class="container article-page">
+
+
+<div class="category">
+MAŁA ŁAZIENKA
+</div>
+
+
+<h1>
+12 sposobów na więcej miejsca w małej łazience
+</h1>
+
+
+<p class="intro">
+
+Mała łazienka potrafi być niezłym testem
+kreatywności. Na szczęście nie trzeba
+od razu robić remontu, żeby odzyskać
+trochę przestrzeni.
+
+</p>
+
+
+<div class="hero-image">
+🚿
+</div>
+
+
+<div class="article-content">
+
+
+<h2>
+Najważniejsza zasada: wykorzystuj przestrzeń pionowo
+</h2>
+
+
+<p>
+
+W małej łazience podłoga i blat szybko się
+kończą. Dlatego warto patrzeć również
+w górę.
+
+Ściany, drzwi, przestrzeń nad toaletą
+czy miejsce pod umywalką mogą stać się
+dodatkowym miejscem do przechowywania.
+
+</p>
+
+
+<div class="tip">
+
+<strong>💡 Tip 1000Rays:</strong>
+
+Zanim kupisz kolejny mebel, sprawdź,
+czy możesz wykorzystać przestrzeń,
+która już istnieje.
+
+</div>
+
+
+
+<h2>
+12 prostych sposobów
+</h2>
+
+
+<!-- 1 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">1</div>
+
+<h3>
+Półka nad toaletą
+</h3>
+
+</div>
+
+<p>
+
+Przestrzeń nad WC często pozostaje
+całkowicie pusta.
+
+Wąska półka lub regał może pomieścić
+ręczniki, kosmetyki oraz papier toaletowy.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+bardzo małych łazienek.
+
+</div>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">2</div>
+
+<h3>
+Organizer pod umywalkę
+</h3>
+
+</div>
+
+<p>
+
+Miejsce pod umywalką jest idealne
+na środki czystości, zapasowe kosmetyki
+i inne drobiazgi.
+
+Koszyki i wysuwane organizery pozwalają
+wykorzystać tę przestrzeń znacznie lepiej.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+osób z dużą ilością kosmetyków.
+
+</div>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">3</div>
+
+<h3>
+Wieszaki na drzwi
+</h3>
+
+</div>
+
+<p>
+
+Drzwi mogą być dodatkowym miejscem
+na ręczniki, szlafrok czy akcesoria.
+
+Nie zajmują przy tym powierzchni podłogi.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+małych łazienek bez miejsca na stojący wieszak.
+
+</div>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">4</div>
+
+<h3>
+Magnetyczne uchwyty
+</h3>
+
+</div>
+
+<p>
+
+Drobne metalowe przedmioty można
+przechowywać na magnetycznych uchwytach.
+
+Dzięki temu nie muszą leżeć
+na umywalce.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+drobnych akcesoriów.
+
+</div>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">5</div>
+
+<h3>
+Koszyki ścienne
+</h3>
+
+</div>
+
+<p>
+
+Zamiast kolejnej szafki można wykorzystać
+ścianę.
+
+Kilka niewielkich koszyków pozwoli
+posegregować kosmetyki i akcesoria.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+osób, które lubią mieć rzeczy pod ręką.
+
+</div>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">6</div>
+
+<h3>
+Półka narożna pod prysznicem
+</h3>
+
+</div>
+
+<p>
+
+Narożniki kabiny prysznicowej często
+nie są wykorzystywane.
+
+Narożna półka pozwala zebrać
+szampony, żele i inne kosmetyki
+w jednym miejscu.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+kabiny z niewykorzystanym narożnikiem.
+
+</div>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">7</div>
+
+<h3>
+Wąski regał na kółkach
+</h3>
+
+</div>
+
+<p>
+
+Jeśli między pralką a ścianą zostało
+kilkanaście centymetrów, można
+wykorzystać je na wąski regał.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+bardzo wąskich przestrzeni.
+
+</div>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">8</div>
+
+<h3>
+Pojemniki na kosmetyki
+</h3>
+
+</div>
+
+<p>
+
+Jednolite pojemniki pomagają uporządkować
+drobne rzeczy i ograniczyć wizualny chaos.
+
+W małym pomieszczeniu robi to sporą różnicę.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+dużej liczby małych kosmetyków.
+
+</div>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">9</div>
+
+<h3>
+Haczyki samoprzylepne
+</h3>
+
+</div>
+
+<p>
+
+Proste haczyki mogą znaleźć zastosowanie
+na ścianie, drzwiach lub wewnątrz szafki.
+
+Nie wymagają dużej ilości miejsca.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+ręczników i lekkich akcesoriów.
+
+</div>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">10</div>
+
+<h3>
+Organizer na suszarkę i prostownicę
+</h3>
+
+</div>
+
+<p>
+
+Sprzęt do włosów zajmuje sporo miejsca,
+jeśli leży luzem.
+
+Specjalny organizer pozwala trzymać
+go w jednym miejscu.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+osób posiadających kilka urządzeń do włosów.
+
+</div>
+
+</div>
+
+
+
+<!-- 11 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">11</div>
+
+<h3>
+Składany kosz na pranie
+</h3>
+
+</div>
+
+<p>
+
+Tradycyjny kosz na pranie potrafi zajmować
+sporo miejsca.
+
+Składany model można zmniejszyć,
+kiedy nie jest potrzebny.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+łazienek z bardzo małą podłogą.
+
+</div>
+
+</div>
+
+
+
+<!-- 12 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">12</div>
+
+<h3>
+Lustro z miejscem do przechowywania
+</h3>
+
+</div>
+
+<p>
+
+Lustro może pełnić jednocześnie funkcję
+szafki.
+
+To jeden z najlepszych sposobów
+na połączenie dwóch funkcji
+w jednym elemencie.
+
+</p>
+
+<div class="good-for">
+
+<strong>Najlepsze dla:</strong>
+łazienek, w których brakuje szafek.
+
+</div>
+
+</div>
+
+
+
+<h2>
+Od czego zacząć?
+</h2>
+
+
+<p>
+
+Nie musisz od razu kupować dwunastu
+różnych organizerów.
+
+Najpierw znajdź największy problem
+w swojej łazience.
+
+</p>
+
+
+<div class="checklist">
+
+<p>🔹 Brakuje miejsca na kosmetyki? → wykorzystaj ścianę.</p>
+
+<p>🔹 Wszystko stoi na umywalce? → użyj organizerów.</p>
+
+<p>🔹 Nie masz miejsca na ręczniki? → wykorzystaj drzwi.</p>
+
+<p>🔹 Brakuje miejsca pod umywalką? → dodaj koszyki.</p>
+
+<p>🔹 Mało miejsca przy prysznicu? → wykorzystaj narożnik.</p>
+
+</div>
+
+
+
+<h2>
+Mała łazienka nie musi być niewygodna
+</h2>
+
+
+<p>
+
+Największy błąd to próba upchnięcia
+wszystkiego na podłodze.
+
+W małej łazience znacznie lepiej sprawdza
+się wykorzystanie ścian, drzwi,
+narożników oraz wnętrza szafek.
+
+</p>
+
+
+<p>
+
+Zacznij od jednej rzeczy, która najbardziej
+Ci przeszkadza. Czasami jeden dobrze
+dobrany organizer potrafi zrobić większą
+różnicę niż całkowita zmiana wyposażenia.
+
+</p>
+
+
+
+<div class="tip">
+
+<strong>⚠️ Przed zakupem:</strong>
+
+Zawsze sprawdź wymiary produktu,
+sposób montażu oraz maksymalne
+obciążenie. Szczególnie w przypadku
+półek, haczyków i organizerów
+montowanych na ścianie.
+
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-inner">
+
+
+<div>
+
+<div class="footer-logo">
+1000Rays
+</div>
+
+<small>
+Sprytne rozwiązania do małych przestrzeni.
+</small>
+
+</div>
+
+
+<a
+href="https://1000lrays.github.io/1000Rays/">
+
+← Wróć do 1000Rays
+
+</a>
+
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
