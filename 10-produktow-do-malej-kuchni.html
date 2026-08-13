@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>10 genialnych produktów do małej kuchni | 1000Rays</title>
+
+<meta name="description" content="10 praktycznych produktów i rozwiązań, które pomagają lepiej wykorzystać małą kuchnię. Organizacja szafek, blatów i przechowywania.">
+
+<style>
+
+:root {
+    --navy: #0f172a;
+    --blue: #38bdf8;
+    --blue-dark: #0284c7;
+    --blue-light: #e0f2fe;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text: #172033;
+    --gray: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.back {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.back:hover {
+    color: var(--blue);
+}
+
+
+/* ARTICLE */
+
+.article-page {
+    padding: 70px 0 100px;
+}
+
+.category {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 45px;
+    max-width: 760px;
+}
+
+.hero-image {
+    height: 320px;
+    background: linear-gradient(135deg, #fff3d6, #eff6ff);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-bottom: 55px;
+}
+
+.article-content {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.article-content h2 {
+    color: var(--navy);
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 45px 0 18px;
+}
+
+.article-content h2:first-child {
+    margin-top: 0;
+}
+
+.article-content h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin: 30px 0 10px;
+}
+
+.article-content p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+.article-content ul {
+    margin: 15px 0 25px 25px;
+    color: #475569;
+}
+
+.article-content li {
+    margin-bottom: 10px;
+}
+
+
+/* PRODUCT */
+
+.product {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 25px 0 35px;
+}
+
+.product-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.number {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.product h3 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.product p {
+    margin-bottom: 10px;
+}
+
+.good-for {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.good-for strong {
+    color: var(--navy);
+}
+
+
+/* TIP */
+
+.tip {
+    background: var(--blue-light);
+    border-left: 5px solid var(--blue-dark);
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.tip strong {
+    color: var(--navy);
+}
+
+
+/* TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
+    margin: 30px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 14px;
+    text-align: left;
+}
+
+th {
+    background: var(--navy);
+    color: white;
+}
+
+td {
+    color: #475569;
+}
+
+
+/* NOTE */
+
+.note {
+    background: #f1f5f9;
+    padding: 22px;
+    border-radius: 12px;
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 40px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .article-page {
+        padding: 45px 0 70px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        height: 230px;
+        font-size: 75px;
+    }
+
+    .article-content {
+        padding: 27px 22px;
+    }
+
+    .article-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="logo">
+
+1000<span>Rays</span>
+
+</a>
+
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="back">
+
+← Strona główna
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- ARTICLE -->
+
+<main>
+
+<div class="container article-page">
+
+
+<div class="category">
+MAŁA KUCHNIA
+</div>
+
+
+<h1>
+10 genialnych produktów do małej kuchni
+</h1>
+
+
+<p class="intro">
+
+Mała kuchnia nie musi oznaczać ciągłego
+przekładania rzeczy z miejsca na miejsce.
+
+Dobrze dobrane rozwiązania mogą sprawić,
+że blat, szafki i szuflady będą znacznie
+bardziej funkcjonalne.
+
+</p>
+
+
+<div class="hero-image">
+🍳
+</div>
+
+
+<div class="article-content">
+
+
+<h2>
+Jak urządzić małą kuchnię?
+</h2>
+
+
+<p>
+
+W małej kuchni liczy się przede wszystkim
+dobre wykorzystanie przestrzeni.
+
+Nie zawsze potrzebujesz większej liczby szafek.
+Często wystarczy lepiej wykorzystać te,
+które już masz.
+
+</p>
+
+
+<div class="tip">
+
+<strong>💡 Zasada 1000Rays:</strong>
+
+W małej kuchni wykorzystuj nie tylko
+powierzchnię blatu, ale również ściany,
+wnętrza szafek i przestrzeń pionową.
+
+</div>
+
+
+
+<h2>
+10 rzeczy, które warto rozważyć
+</h2>
+
+
+<!-- 1 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+1
+</div>
+
+<h3>
+Organizer do szuflady
+</h3>
+
+</div>
+
+<p>
+
+Sztućce, przybory kuchenne i drobne akcesoria
+potrafią bardzo szybko zamienić szufladę
+w mały chaos.
+
+Organizer pozwala podzielić ją na kilka
+mniejszych stref.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób, które mają mało szuflad
+i chcą lepiej wykorzystać ich przestrzeń.
+
+</div>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+2
+</div>
+
+<h3>
+Półka do szafki kuchennej
+</h3>
+
+</div>
+
+<p>
+
+Jeżeli nad talerzami lub kubkami zostaje
+dużo pustego miejsca, dodatkowa półka
+może stworzyć drugą powierzchnię
+do przechowywania.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób z wysokimi szafkami.
+
+</div>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+3
+</div>
+
+<h3>
+Wąski organizer wysuwany
+</h3>
+
+</div>
+
+<p>
+
+Wąskie przestrzenie między szafkami
+często są całkowicie niewykorzystane.
+
+Wysuwany organizer może zamienić
+taką szczelinę w miejsce na przyprawy,
+butelki lub środki czystości.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób mających niewykorzystane
+wąskie przestrzenie.
+
+</div>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+4
+</div>
+
+<h3>
+Magnetyczny uchwyt na akcesoria
+</h3>
+
+</div>
+
+<p>
+
+Magnetyczne rozwiązania pozwalają
+wykorzystać powierzchnie, które normalnie
+nie służą do przechowywania.
+
+Można dzięki nim uporządkować
+drobne metalowe akcesoria.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób, które chcą ograniczyć
+rzeczy stojące na blacie.
+
+</div>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+5
+</div>
+
+<h3>
+Wieszak na drzwi szafki
+</h3>
+
+</div>
+
+<p>
+
+Wewnętrzna strona drzwi szafki
+może być świetnym miejscem
+na ręczniki, rękawiczki kuchenne
+lub małe akcesoria.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla małych kuchni z ograniczoną
+liczbą szuflad.
+
+</div>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+6
+</div>
+
+<h3>
+Pojemniki do przechowywania żywności
+</h3>
+
+</div>
+
+<p>
+
+Jednolite pojemniki można ustawiać
+jeden na drugim, dzięki czemu
+wykorzystują wysokość szafki.
+
+Dodatkowo łatwiej zobaczyć,
+co znajduje się w środku.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób przechowujących dużo
+produktów sypkich.
+
+</div>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+7
+</div>
+
+<h3>
+Wieszak pod półkę
+</h3>
+
+</div>
+
+<p>
+
+Prosty wieszak montowany pod półką
+może stworzyć dodatkowe miejsce
+na kubki.
+
+Dzięki temu nie muszą zajmować
+całej powierzchni szafki.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób z dużą liczbą kubków.
+
+</div>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+8
+</div>
+
+<h3>
+Składany ociekacz
+</h3>
+
+</div>
+
+<p>
+
+Tradycyjny ociekacz może zajmować
+sporo miejsca przez cały czas.
+
+Składany model można schować,
+kiedy nie jest potrzebny.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób z bardzo małym blatem.
+
+</div>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+9
+</div>
+
+<h3>
+Obrotowa półka do szafki
+</h3>
+
+</div>
+
+<p>
+
+W narożnych szafkach często trudno
+jest sięgnąć do rzeczy znajdujących
+się z tyłu.
+
+Obrotowa półka ułatwia dostęp
+do przechowywanych produktów.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób z głębokimi szafkami.
+
+</div>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="product">
+
+<div class="product-top">
+
+<div class="number">
+10
+</div>
+
+<h3>
+Wąski wózek kuchenny
+</h3>
+
+</div>
+
+<p>
+
+Wózek na kółkach może pełnić funkcję
+dodatkowego mini-magazynu.
+
+Można przechowywać na nim przyprawy,
+produkty spożywcze lub akcesoria.
+
+A kiedy przeszkadza — po prostu
+go przesuwasz.
+
+</p>
+
+<div class="good-for">
+
+<strong>Dla kogo?</strong>
+Dla osób, które mają choć trochę
+wolnego miejsca między meblami.
+
+</div>
+
+</div>
+
+
+
+<h2>
+Które rozwiązania dają największy efekt?
+</h2>
+
+
+<p>
+
+Nie musisz kupować wszystkiego naraz.
+
+Jeżeli masz bardzo małą kuchnię,
+zacznij od rzeczy, które rozwiązują
+Twój największy problem.
+
+</p>
+
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Problem
+</th>
+
+<th>
+Rozwiązanie
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>
+Bałagan w szufladach
+</td>
+
+<td>
+Organizer do szuflady
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Za mało miejsca w szafkach
+</td>
+
+<td>
+Dodatkowa półka
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Wąska niewykorzystana przestrzeń
+</td>
+
+<td>
+Wysuwany organizer
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Za dużo rzeczy na blacie
+</td>
+
+<td>
+Wieszaki i organizery
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Brak miejsca na produkty
+</td>
+
+<td>
+Pojemniki piętrowe
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+
+<h2>
+Mała kuchnia, duża różnica
+</h2>
+
+
+<p>
+
+Najlepsze rozwiązania niekoniecznie
+są największe.
+
+Czasami kilka małych zmian wystarczy,
+żeby kuchnia zaczęła działać
+znacznie lepiej.
+
+</p>
+
+
+<p>
+
+Najważniejsze jest dopasowanie rozwiązania
+do konkretnej kuchni.
+
+Zmierz szafkę, sprawdź szerokość
+wolnej przestrzeni i dopiero wtedy
+wybieraj konkretny produkt.
+
+</p>
+
+
+<div class="note">
+
+<strong>Ważne:</strong>
+
+Przed zakupem konkretnego produktu
+zawsze sprawdź jego wymiary, sposób montażu,
+materiały oraz aktualne opinie użytkowników.
+
+W kolejnych artykułach 1000Rays będziemy
+dodawać konkretne produkty i miejsca,
+w których można je znaleźć.
+
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+
+<div class="footer-logo">
+1000Rays
+</div>
+
+<small>
+Sprytne rozwiązania do małych przestrzeni.
+</small>
+
+</div>
+
+
+<a href="https://1000lrays.github.io/1000Rays/">
+
+← Wróć do 1000Rays
+
+</a>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
