@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>20 sprytnych rozwiązań do małego mieszkania | 1000Rays</title>
+
+<meta name="description" content="20 prostych i sprytnych sposobów na lepsze wykorzystanie małego mieszkania. Przechowywanie, organizacja i oszczędzanie miejsca bez wielkiego remontu.">
+
+<style>
+
+:root {
+    --navy: #0f172a;
+    --blue: #38bdf8;
+    --blue-dark: #0284c7;
+    --blue-light: #e0f2fe;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text: #172033;
+    --gray: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.back {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.back:hover {
+    color: var(--blue);
+}
+
+
+/* ARTICLE */
+
+.article-page {
+    padding: 70px 0 100px;
+}
+
+.category {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 45px;
+    max-width: 760px;
+}
+
+.hero-image {
+    height: 320px;
+    background: linear-gradient(135deg, #e0f2fe, #ede9fe);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-bottom: 55px;
+}
+
+.article-content {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.article-content h2 {
+    color: var(--navy);
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 45px 0 18px;
+}
+
+.article-content h2:first-child {
+    margin-top: 0;
+}
+
+.article-content p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+
+/* TIP */
+
+.tip {
+    background: var(--blue-light);
+    border-left: 5px solid var(--blue-dark);
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.tip strong {
+    color: var(--navy);
+}
+
+
+/* IDEAS */
+
+.idea {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 25px 0 35px;
+}
+
+.idea-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.number {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.idea h3 {
+    color: var(--navy);
+    font-size: 21px;
+    margin: 0;
+}
+
+.idea p {
+    margin-bottom: 10px;
+}
+
+.best {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.best strong {
+    color: var(--navy);
+}
+
+
+/* CHECKLIST */
+
+.checklist {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.checklist p {
+    margin-bottom: 10px;
+}
+
+.checklist p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 40px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .article-page {
+        padding: 45px 0 70px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        height: 230px;
+        font-size: 75px;
+    }
+
+    .article-content {
+        padding: 27px 22px;
+    }
+
+    .article-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="container nav">
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="logo">
+
+1000<span>Rays</span>
+
+</a>
+
+<a
+href="https://1000lrays.github.io/1000Rays/"
+class="back">
+
+← Strona główna
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+<div class="container article-page">
+
+
+<div class="category">
+SPRĘTNE ROZWIĄZANIA
+</div>
+
+
+<h1>
+20 sprytnych rozwiązań do małego mieszkania
+</h1>
+
+
+<p class="intro">
+
+Małe mieszkanie nie musi oznaczać
+ciągłego potykania się o rzeczy.
+
+Czasem wystarczy kilka prostych
+rozwiązań, żeby odzyskać sporo
+miejsca i ograniczyć codzienny chaos.
+
+</p>
+
+
+<div class="hero-image">
+🏠
+</div>
+
+
+<div class="article-content">
+
+
+<h2>
+Nie potrzebujesz większego mieszkania
+</h2>
+
+
+<p>
+
+Zanim zaczniesz myśleć o przeprowadzce,
+sprawdź, czy obecna przestrzeń jest
+naprawdę dobrze wykorzystana.
+
+W małych mieszkaniach ogromną różnicę
+robi wykorzystanie ścian, wysokości,
+narożników i miejsc, które zwykle
+pozostają puste.
+
+</p>
+
+
+<div class="tip">
+
+<strong>💡 Zasada 1000Rays:</strong>
+
+Najlepsze rozwiązanie to takie,
+które wykorzystuje istniejącą
+przestrzeń bez tworzenia kolejnego
+bałaganu.
+
+</div>
+
+
+
+<h2>
+20 pomysłów, które warto sprawdzić
+</h2>
+
+
+<!-- 1 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">1</div>
+
+<h3>
+Pojemniki pod łóżkiem
+</h3>
+
+</div>
+
+<p>
+
+Idealne miejsce na pościel,
+koce, buty i ubrania sezonowe.
+
+</p>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">2</div>
+
+<h3>
+Półki nad drzwiami
+</h3>
+
+</div>
+
+<p>
+
+Wykorzystaj przestrzeń,
+która zazwyczaj pozostaje pusta.
+
+</p>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">3</div>
+
+<h3>
+Wąski regał między meblami
+</h3>
+
+</div>
+
+<p>
+
+Kilkanaście centymetrów wolnej
+przestrzeni może wystarczyć
+na dodatkowe przechowywanie.
+
+</p>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">4</div>
+
+<h3>
+Haczyki na ścianach
+</h3>
+
+</div>
+
+<p>
+
+Torby, klucze, słuchawki i inne
+drobiazgi mogą wisieć zamiast
+leżeć na meblach.
+
+</p>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">5</div>
+
+<h3>
+Składany stół
+</h3>
+
+</div>
+
+<p>
+
+Po skończonym posiłku można
+odzyskać część przestrzeni.
+
+</p>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">6</div>
+
+<h3>
+Składane krzesła
+</h3>
+
+</div>
+
+<p>
+
+Możesz je schować, kiedy
+nie są potrzebne.
+
+</p>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">7</div>
+
+<h3>
+Organizer na drzwi
+</h3>
+
+</div>
+
+<p>
+
+Drzwi mogą stać się dodatkową
+przestrzenią na drobiazgi.
+
+</p>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">8</div>
+
+<h3>
+Wykorzystanie narożników
+</h3>
+
+</div>
+
+<p>
+
+Narożne półki pozwalają wykorzystać
+miejsce, które często jest pomijane.
+
+</p>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">9</div>
+
+<h3>
+Pionowe przechowywanie
+</h3>
+
+</div>
+
+<p>
+
+Wykorzystuj wysokość zamiast
+zajmować kolejną powierzchnię podłogi.
+
+</p>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">10</div>
+
+<h3>
+Pudełka z pokrywkami
+</h3>
+
+</div>
+
+<p>
+
+Pomagają uporządkować rzeczy,
+które nie muszą być cały czas
+na widoku.
+
+</p>
+
+</div>
+
+
+
+<!-- 11 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">11</div>
+
+<h3>
+Wielofunkcyjne meble
+</h3>
+
+</div>
+
+<p>
+
+Łóżko z szufladami, pufa ze schowkiem
+czy stolik z miejscem do przechowywania
+mogą zastąpić kilka osobnych rzeczy.
+
+</p>
+
+</div>
+
+
+
+<!-- 12 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">12</div>
+
+<h3>
+Lustro z półką
+</h3>
+
+</div>
+
+<p>
+
+Łączy dekorację z praktycznym
+miejscem do przechowywania.
+
+</p>
+
+</div>
+
+
+
+<!-- 13 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">13</div>
+
+<h3>
+Wieszaki wielopoziomowe
+</h3>
+
+</div>
+
+<p>
+
+Pozwalają lepiej wykorzystać
+wysokość szafy.
+
+</p>
+
+</div>
+
+
+
+<!-- 14 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">14</div>
+
+<h3>
+Koszyki na półkach
+</h3>
+
+</div>
+
+<p>
+
+Pomagają podzielić dużą przestrzeń
+na mniejsze i łatwiejsze do
+organizacji sekcje.
+
+</p>
+
+</div>
+
+
+
+<!-- 15 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">15</div>
+
+<h3>
+Organizery do szuflad
+</h3>
+
+</div>
+
+<p>
+
+Koniec z przekopywaniem całej
+szuflady w poszukiwaniu jednej rzeczy.
+
+</p>
+
+</div>
+
+
+
+<!-- 16 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">16</div>
+
+<h3>
+Ukrywanie kabli
+</h3>
+
+</div>
+
+<p>
+
+Uporządkowane kable sprawiają,
+że małe pomieszczenie wygląda
+znacznie czyściej.
+
+</p>
+
+</div>
+
+
+
+<!-- 17 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">17</div>
+
+<h3>
+Składane wyposażenie
+</h3>
+
+</div>
+
+<p>
+
+Jeżeli czegoś używasz tylko
+okazjonalnie, nie musi cały czas
+zajmować miejsca.
+
+</p>
+
+</div>
+
+
+
+<!-- 18 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">18</div>
+
+<h3>
+Pojemniki próżniowe
+</h3>
+
+</div>
+
+<p>
+
+Świetne do przechowywania
+grubych ubrań i pościeli.
+
+</p>
+
+</div>
+
+
+
+<!-- 19 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">19</div>
+
+<h3>
+Wykorzystanie przestrzeni nad szafą
+</h3>
+
+</div>
+
+<p>
+
+Jeżeli zostaje tam wolne miejsce,
+można przechowywać rzeczy sezonowe
+w zamkniętych pudełkach.
+
+</p>
+
+</div>
+
+
+
+<!-- 20 -->
+
+<div class="idea">
+
+<div class="idea-top">
+
+<div class="number">20</div>
+
+<h3>
+Mniej rzeczy = więcej miejsca
+</h3>
+
+</div>
+
+<p>
+
+To najtańszy trik ze wszystkich.
+
+Nie każda rzecz musi mieć swoje
+miejsce w mieszkaniu.
+
+Czasami najlepszym sposobem
+na odzyskanie przestrzeni jest
+pozbycie się rzeczy, których
+po prostu nie używasz.
+
+</p>
+
+</div>
+
+
+
+<h2>
+Od czego zacząć?
+</h2>
+
+
+<p>
+
+Nie próbuj wdrożyć wszystkich
+20 pomysłów naraz.
+
+Wybierz trzy miejsca,
+które najbardziej Ci przeszkadzają.
+
+</p>
+
+
+<div class="checklist">
+
+<p>
+🛏️ Łóżko → wykorzystaj przestrzeń pod nim.
+</p>
+
+<p>
+👕 Szafa → wykorzystaj wysokość i drzwi.
+</p>
+
+<p>
+🚪 Drzwi → dodaj organizery lub haczyki.
+</p>
+
+<p>
+🧱 Ściany → dodaj półki.
+</p>
+
+<p>
+📦 Rzeczy sezonowe → schowaj je wyżej.
+</p>
+
+</div>
+
+
+
+<h2>
+Najlepsze rozwiązania nie muszą być drogie
+</h2>
+
+
+<p>
+
+Nie musisz kupować drogich mebli
+na wymiar.
+
+Wiele problemów można rozwiązać
+prostymi organizerami, pudełkami,
+haczykami i półkami.
+
+</p>
+
+
+<p>
+
+Najważniejsze jest jednak to,
+żeby każde nowe rozwiązanie
+faktycznie rozwiązywało problem.
+
+Nie kupuj organizera tylko dlatego,
+że wygląda fajnie. 😅
+
+</p>
+
+
+<div class="tip">
+
+<strong>🔥 Zasada zakupowa:</strong>
+
+Najpierw znajdź problem.
+Potem znajdź rozwiązanie.
+Dopiero na końcu kup produkt.
+
+</div>
+
+
+
+<h2>
+Podsumowanie
+</h2>
+
+
+<p>
+
+Małe mieszkanie może być wygodne,
+funkcjonalne i uporządkowane.
+
+Nie chodzi o maksymalne wykorzystanie
+każdego centymetra.
+
+Chodzi o mądre wykorzystanie
+tych centymetrów, które już masz.
+
+</p>
+
+
+<p>
+
+Zacznij od jednej rzeczy.
+
+Jedna półka.
+Jeden organizer.
+Jedno pudełko.
+
+A potem zobaczysz, jak szybko
+zaczyna robić się więcej miejsca.
+
+</p>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<div class="container footer-inner">
+
+
+<div>
+
+<div class="footer-logo">
+1000Rays
+</div>
+
+<small>
+Sprytne rozwiązania do małych przestrzeni.
+</small>
+
+</div>
+
+
+<a
+href="https://1000lrays.github.io/1000Rays/">
+
+← Wróć do 1000Rays
+
+</a>
+
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
