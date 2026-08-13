@@ -3,64 +3,641 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1000Rays — Sprytne rozwiązania do małych przestrzeni</title>
-    <meta name="description" content="1000Rays — praktyczne produkty i pomysły, które pomagają lepiej wykorzystać małe mieszkania.">
+
+    <title>1000Rays — Sprytne rozwiązania do małych mieszkań</title>
+
+    <meta name="description" content="1000Rays — praktyczne produkty, pomysły i inspiracje, które pomagają lepiej wykorzystać małe mieszkania i niewielkie przestrzenie.">
+
+    <style>
+        :root {
+            --dark: #171717;
+            --light: #faf9f6;
+            --white: #ffffff;
+            --accent: #f2b84b;
+            --gray: #666666;
+            --border: #e7e5e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        /* ===== HEADER ===== */
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .menu {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .menu a:hover {
+            color: #b77b16;
+        }
+
+        /* ===== HERO ===== */
+
+        .hero {
+            padding: 90px 0;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(242,184,75,0.18), transparent 30%),
+                var(--light);
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 7px 13px;
+            background: #fff3d8;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: var(--gray);
+            font-size: 19px;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 22px;
+            background: var(--dark);
+            color: var(--white);
+            border-radius: 10px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* ===== SECTION ===== */
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            letter-spacing: -1.5px;
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+        }
+
+        /* ===== CATEGORIES ===== */
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .category {
+            min-height: 170px;
+            padding: 25px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: 0.2s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .category-icon {
+            font-size: 34px;
+            margin-bottom: auto;
+        }
+
+        .category h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .category p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* ===== ARTICLES ===== */
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .article {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.2s ease;
+        }
+
+        .article:hover {
+            transform: translateY(-4px);
+        }
+
+        .article-image {
+            height: 180px;
+            background: linear-gradient(135deg, #f4e4bf, #eee9df);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+        }
+
+        .article-content {
+            padding: 22px;
+        }
+
+        .article-content small {
+            color: #a47728;
+            font-weight: 700;
+        }
+
+        .article h3 {
+            font-size: 20px;
+            line-height: 1.25;
+            margin: 8px 0 10px;
+        }
+
+        .article p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* ===== ABOUT ===== */
+
+        .about {
+            background: var(--dark);
+            color: var(--white);
+            border-radius: 20px;
+            padding: 55px;
+        }
+
+        .about h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            letter-spacing: -1.5px;
+        }
+
+        .about p {
+            max-width: 700px;
+            color: #d0d0d0;
+        }
+
+        /* ===== NEWSLETTER ===== */
+
+        .newsletter {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .newsletter h2 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .newsletter p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        /* ===== FOOTER ===== */
+
+        footer {
+            background: var(--dark);
+            color: #aaa;
+            padding: 35px 0;
+            margin-top: 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* ===== MOBILE ===== */
+
+        @media (max-width: 800px) {
+
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .categories,
+            .articles {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                padding: 35px 25px;
+            }
+
+            .about h2 {
+                font-size: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>1000Rays</h1>
-    <p>Sprytne rozwiązania do małych przestrzeni.</p>
+<!-- ===== HEADER ===== -->
 
-    <nav>
-        <a href="#organizacja">Organizacja</a>
-        <a href="#kuchnia">Kuchnia</a>
-        <a href="#lazienka">Łazienka</a>
-        <a href="#sypialnia">Sypialnia</a>
-        <a href="#home-office">Home office</a>
-    </nav>
+<header>
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            1000<span>Rays</span>
+        </a>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#kategorie">Kategorie</a></li>
+                <li><a href="#artykuly">Artykuły</a></li>
+                <li><a href="#onas">O nas</a></li>
+            </ul>
+        </nav>
+
+    </div>
 </header>
+
+
+<!-- ===== HERO ===== -->
 
 <main>
 
-    <section>
-        <h2>Małe mieszkanie? Wykorzystaj każdy centymetr.</h2>
+<section class="hero">
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                🏠 Małe mieszkanie? Mamy pomysły.
+            </div>
+
+            <h1>
+                Mała przestrzeń.<br>
+                <span>Wielkie możliwości.</span>
+            </h1>
+
+            <p>
+                1000Rays pomaga znajdować sprytne produkty,
+                praktyczne rozwiązania i pomysły, dzięki którym
+                nawet małe mieszkanie może być wygodne i dobrze zorganizowane.
+            </p>
+
+            <a href="#artykuly" class="button">
+                Zobacz nasze pomysły →
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===== CATEGORIES ===== -->
+
+<section id="kategorie">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Znajdź coś dla siebie</h2>
+            <p>Praktyczne rozwiązania podzielone na najważniejsze części mieszkania.</p>
+        </div>
+
+        <div class="categories">
+
+            <a href="#" class="category">
+                <div class="category-icon">📦</div>
+                <h3>Organizacja</h3>
+                <p>Organizery, pojemniki i sprytne przechowywanie.</p>
+            </a>
+
+            <a href="#" class="category">
+                <div class="category-icon">🍳</div>
+                <h3>Mała kuchnia</h3>
+                <p>Jak wykorzystać każdy centymetr kuchni.</p>
+            </a>
+
+            <a href="#" class="category">
+                <div class="category-icon">🚿</div>
+                <h3>Łazienka</h3>
+                <p>Małe rozwiązania, które robią dużą różnicę.</p>
+            </a>
+
+            <a href="#" class="category">
+                <div class="category-icon">🛏️</div>
+                <h3>Sypialnia</h3>
+                <p>Więcej miejsca i lepsza organizacja.</p>
+            </a>
+
+            <a href="#" class="category">
+                <div class="category-icon">💻</div>
+                <h3>Home office</h3>
+                <p>Wygodne biuro nawet na kilku metrach.</p>
+            </a>
+
+            <a href="#" class="category">
+                <div class="category-icon">✨</div>
+                <h3>Sprytne rozwiązania</h3>
+                <p>Produkty, o których nie wiedziałeś, że ich potrzebujesz.</p>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== ARTICLES ===== -->
+
+<section id="artykuly">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Najnowsze artykuły</h2>
+            <p>Pomysły, rankingi i praktyczne rozwiązania dla małych przestrzeni.</p>
+        </div>
+
+        <div class="articles">
+
+            <article class="article">
+
+                <div class="article-image">
+                    📦
+                </div>
+
+                <div class="article-content">
+
+                    <small>ORGANIZACJA</small>
+
+                    <h3>
+                        15 rzeczy, które oszczędzają miejsce w małym mieszkaniu
+                    </h3>
+
+                    <p>
+                        Sprawdź produkty, które pomagają wykorzystać
+                        przestrzeń bez robienia z mieszkania magazynu.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="article">
+
+                <div class="article-image">
+                    👕
+                </div>
+
+                <div class="article-content">
+
+                    <small>SYPIALNIA</small>
+
+                    <h3>
+                        Najlepsze organizery do małej szafy
+                    </h3>
+
+                    <p>
+                        Sposoby na uporządkowanie ubrań i wykorzystanie
+                        miejsca, które normalnie się marnuje.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="article">
+
+                <div class="article-image">
+                    🍳
+                </div>
+
+                <div class="article-content">
+
+                    <small>KUCHNIA</small>
+
+                    <h3>
+                        Mała kuchnia: jak wykorzystać każdy centymetr?
+                    </h3>
+
+                    <p>
+                        Praktyczne produkty i pomysły, które pomogą
+                        ogarnąć nawet naprawdę małą kuchnię.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== ABOUT ===== -->
+
+<section id="onas">
+
+    <div class="container">
+
+        <div class="about">
+
+            <h2>Po co powstało 1000Rays?</h2>
+
+            <p>
+                Małe mieszkanie nie musi oznaczać małego komfortu.
+                Szukamy praktycznych produktów i pomysłów, które
+                pomagają lepiej wykorzystać dostępną przestrzeń.
+                Bez zbędnego kombinowania i bez kupowania rzeczy,
+                które tylko zajmują kolejne miejsce.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== NEWSLETTER ===== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <h2>Mało miejsca? Żaden problem.</h2>
+
         <p>
-            Na 1000Rays znajdziesz praktyczne rozwiązania,
-            które pomagają lepiej wykorzystać niewielką przestrzeń.
+            Zaglądaj do 1000Rays po nowe pomysły,
+            produkty i rozwiązania do małych przestrzeni.
         </p>
-    </section>
 
-    <section id="organizacja">
-        <h2>Organizacja</h2>
-        <p>Organizery, półki, pojemniki i inne sprytne sposoby na przechowywanie.</p>
-    </section>
+        <a href="#artykuly" class="button">
+            Przeglądaj artykuły →
+        </a>
 
-    <section id="kuchnia">
-        <h2>Mała kuchnia</h2>
-        <p>Pomysły i produkty pomagające wykorzystać każdy kawałek kuchni.</p>
-    </section>
+    </div>
 
-    <section id="lazienka">
-        <h2>Mała łazienka</h2>
-        <p>Praktyczne rozwiązania do przechowywania i organizacji.</p>
-    </section>
-
-    <section id="sypialnia">
-        <h2>Sypialnia</h2>
-        <p>Sprytne produkty do przechowywania i oszczędzania miejsca.</p>
-    </section>
-
-    <section id="home-office">
-        <h2>Home office</h2>
-        <p>Jak stworzyć wygodne miejsce do pracy nawet na kilku metrach.</p>
-    </section>
+</section>
 
 </main>
 
+
+<!-- ===== FOOTER ===== -->
+
 <footer>
-    <p>© 2026 1000Rays</p>
+
+    <div class="container footer-content">
+
+        <div>
+            <div class="footer-logo">1000Rays</div>
+            <small>Sprytne rozwiązania do małych przestrzeni.</small>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">O nas</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Polityka prywatności</a>
+        </div>
+
+    </div>
+
+    <div class="container" style="margin-top:25px; font-size:12px;">
+        © 2026 1000Rays. Wszystkie prawa zastrzeżone.
+    </div>
+
 </footer>
 
 </body>
