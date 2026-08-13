@@ -6,358 +6,384 @@
 
 <title>1000Rays — Małe mieszkania, wielkie pomysły</title>
 
-<meta name="description" content="1000Rays — sprytne rozwiązania, organizacja i wyposażenie małych mieszkań.">
-
 <style>
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fa;
-    color: #172033;
-    line-height: 1.6;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#172033;
+    line-height:1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-.container {
-    width: 92%;
-    max-width: 1100px;
-    margin: auto;
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
 }
 
 
 /* HEADER */
 
-header {
-    background: #111827;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+header{
+    background:#111827;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.nav {
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: 900;
+.logo{
+    font-size:28px;
+    font-weight:900;
 }
 
-.logo span {
-    color: #38bdf8;
+.logo span{
+    color:#38bdf8;
 }
 
-nav {
-    display: flex;
-    gap: 25px;
+nav{
+    display:flex;
+    gap:25px;
 }
 
-nav a {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #38bdf8;
+nav a{
+    color:white;
+    font-size:14px;
+    font-weight:bold;
 }
 
 
 /* HERO */
 
-.hero {
-    padding: 90px 0;
-    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+.hero{
+    padding:90px 0;
+    background:linear-gradient(135deg,#e0f2fe,#f8fafc);
 }
 
-.hero-content {
-    max-width: 800px;
+.hero-content{
+    max-width:800px;
 }
 
-.badge {
-    display: inline-block;
-    background: white;
-    color: #0284c7;
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.badge{
+    display:inline-block;
+    background:white;
+    color:#0284c7;
+    padding:8px 15px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
-.hero h1 {
-    font-size: clamp(45px, 7vw, 75px);
-    line-height: 1;
-    letter-spacing: -3px;
-    margin-bottom: 25px;
+.hero h1{
+    font-size:clamp(45px,7vw,75px);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:25px;
 }
 
-.hero h1 span {
-    color: #0284c7;
+.hero h1 span{
+    color:#0284c7;
 }
 
-.hero p {
-    font-size: 20px;
-    color: #64748b;
-    max-width: 700px;
-    margin-bottom: 30px;
+.hero p{
+    color:#64748b;
+    font-size:20px;
+    max-width:700px;
+    margin-bottom:30px;
 }
 
-.button {
-    display: inline-block;
-    background: #111827;
-    color: white;
-    padding: 14px 22px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #0284c7;
+.button{
+    display:inline-block;
+    background:#111827;
+    color:white;
+    padding:14px 22px;
+    border-radius:10px;
+    font-weight:bold;
 }
 
 
 /* SEKCJE */
 
-section {
-    padding: 70px 0;
+section{
+    padding:70px 0;
 }
 
-.section-title {
-    margin-bottom: 30px;
+.section-title{
+    margin-bottom:30px;
 }
 
-.section-title h2 {
-    font-size: 38px;
-    margin-bottom: 8px;
+.section-title h2{
+    font-size:38px;
 }
 
-.section-title p {
-    color: #64748b;
+.section-title p{
+    color:#64748b;
 }
 
 
-/* ARTYKUŁY */
+/* KAFELKI */
 
-.articles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.articles{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 18px;
-    overflow: hidden;
-    transition: .2s;
+.card{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.2s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,.08);
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
 }
 
-.card-image {
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 65px;
-    background: #e0f2fe;
+.card-image{
+    height:170px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+    background:#e0f2fe;
 }
 
-.card-body {
-    padding: 22px;
+.card-body{
+    padding:22px;
 }
 
-.category {
-    color: #0284c7;
-    font-size: 11px;
-    font-weight: bold;
+.category{
+    color:#0284c7;
+    font-size:11px;
+    font-weight:bold;
 }
 
-.card h3 {
-    font-size: 21px;
-    line-height: 1.2;
-    margin: 9px 0;
+.card h3{
+    font-size:21px;
+    line-height:1.2;
+    margin:8px 0;
 }
 
-.card p {
-    color: #64748b;
-    font-size: 14px;
-    margin-bottom: 18px;
+.card p{
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:15px;
 }
 
-.read {
-    color: #0284c7;
-    font-weight: bold;
-    font-size: 14px;
+.read{
+    color:#0284c7;
+    font-size:14px;
+    font-weight:bold;
+}
+
+
+/* ARTYKUŁ */
+
+.article-page{
+    display:none;
+    background:white;
+    min-height:70vh;
+}
+
+.article-page.active{
+    display:block;
+}
+
+.article-content{
+    max-width:800px;
+    margin:auto;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#0284c7;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.article-content h1{
+    font-size:clamp(35px,6vw,55px);
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.article-content .intro{
+    font-size:19px;
+    color:#64748b;
+    margin-bottom:35px;
+}
+
+.article-content h2{
+    font-size:28px;
+    margin:35px 0 12px;
+}
+
+.article-content p{
+    margin-bottom:18px;
+}
+
+.tip{
+    background:#e0f2fe;
+    border-left:5px solid #0284c7;
+    padding:18px;
+    border-radius:10px;
+    margin:25px 0;
 }
 
 
 /* PRODUKTY */
 
-.products-section {
-    background: white;
+.products-section{
+    background:white;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
 
-.product {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 22px;
+.product{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:22px;
 }
 
-.product-icon {
-    font-size: 45px;
-    margin-bottom: 12px;
+.product-icon{
+    font-size:45px;
+    margin-bottom:12px;
 }
 
-.product h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
+.product h3{
+    font-size:18px;
+    margin-bottom:8px;
 }
 
-.product p {
-    color: #64748b;
-    font-size: 13px;
-    margin-bottom: 18px;
+.product p{
+    color:#64748b;
+    font-size:13px;
+    margin-bottom:18px;
 }
 
-.amazon-button {
-    display: block;
-    text-align: center;
-    background: #111827;
-    color: white;
-    padding: 11px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.amazon-button:hover {
-    background: #0284c7;
+.amazon-button{
+    display:block;
+    text-align:center;
+    background:#111827;
+    color:white;
+    padding:11px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:bold;
 }
 
 
 /* INFO */
 
-.info {
-    background: #111827;
-    color: white;
+.info{
+    background:#111827;
+    color:white;
 }
 
-.info h2 {
-    font-size: 38px;
-    margin-bottom: 15px;
+.info h2{
+    font-size:38px;
+    margin-bottom:15px;
 }
 
-.info p {
-    color: #cbd5e1;
-    max-width: 700px;
+.info p{
+    color:#cbd5e1;
+    max-width:700px;
 }
 
 
 /* FOOTER */
 
-footer {
-    background: #020617;
-    color: #94a3b8;
-    padding: 40px 0;
+footer{
+    background:#020617;
+    color:#94a3b8;
+    padding:40px 0;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+.footer-content{
+    display:flex;
+    justify-content:space-between;
 }
 
-.footer-logo {
-    color: white;
-    font-size: 21px;
-    font-weight: bold;
-}
-
-.footer-note {
-    font-size: 12px;
-    margin-top: 8px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-    font-size: 13px;
+.footer-logo{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
 }
 
 
 /* MOBILE */
 
-@media (max-width: 850px) {
+@media(max-width:850px){
 
-    .articles {
-        grid-template-columns: repeat(2, 1fr);
+    .articles{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .products {
-        grid-template-columns: repeat(2, 1fr);
+    .products{
+        grid-template-columns:repeat(2,1fr);
     }
-
 }
 
-@media (max-width: 600px) {
+@media(max-width:600px){
 
-    nav {
-        display: none;
+    nav{
+        display:none;
     }
 
-    .hero {
-        padding: 60px 0;
+    .hero{
+        padding:60px 0;
     }
 
-    .hero h1 {
-        font-size: 45px;
-        letter-spacing: -2px;
+    .hero h1{
+        font-size:45px;
     }
 
-    .hero p {
-        font-size: 17px;
+    .hero p{
+        font-size:17px;
     }
 
     .articles,
-    .products {
-        grid-template-columns: 1fr;
+    .products{
+        grid-template-columns:1fr;
     }
 
-    .footer-content {
-        flex-direction: column;
+    .footer-content{
+        flex-direction:column;
+        gap:20px;
     }
-
 }
-
 </style>
 </head>
 
@@ -365,13 +391,11 @@ footer {
 <body>
 
 
-<!-- HEADER -->
-
 <header>
 
 <div class="container nav">
 
-<a href="https://1000lrays.github.io/1000Rays/" class="logo">
+<a href="#" class="logo" onclick="pokazGlowna();return false;">
 1000<span>Rays</span>
 </a>
 
@@ -385,7 +409,10 @@ footer {
 </header>
 
 
-<!-- HERO -->
+<!-- GŁÓWNA -->
+
+<div id="glowna">
+
 
 <section class="hero">
 
@@ -419,8 +446,6 @@ Zobacz poradniki →
 </section>
 
 
-<!-- ARTYKUŁY -->
-
 <section id="artykuly">
 
 <div class="container">
@@ -441,26 +466,20 @@ Konkretne pomysły, które możesz wykorzystać od razu.
 <div class="articles">
 
 
-<a class="card"
-href="10-genialnych-rzeczy-do-malego-mieszkania.html">
+<div class="card" onclick="pokazArtykul(1)">
 
-<div class="card-image">
-🏠
-</div>
+<div class="card-image">🏠</div>
 
 <div class="card-body">
 
-<div class="category">
-MAŁE MIESZKANIE
-</div>
+<div class="category">MAŁE MIESZKANIE</div>
 
 <h3>
 10 genialnych rzeczy do małego mieszkania
 </h3>
 
 <p>
-Proste rozwiązania, które pomagają
-odzyskać przestrzeń.
+Proste rzeczy, które mogą zrobić dużą różnicę.
 </p>
 
 <div class="read">
@@ -468,185 +487,23 @@ Czytaj artykuł →
 </div>
 
 </div>
-
-</a>
-
-
-<a class="card"
-href="jak-zorganizowac-mala-kuchnie.html">
-
-<div class="card-image">
-🍳
 </div>
+
+
+<div class="card" onclick="pokazArtykul(2)">
+
+<div class="card-image">✨</div>
 
 <div class="card-body">
 
-<div class="category">
-KUCHNIA
-</div>
-
-<h3>
-Jak zorganizować małą kuchnię?
-</h3>
-
-<p>
-Sprytne sposoby na wykorzystanie
-każdego centymetra.
-</p>
-
-<div class="read">
-Czytaj artykuł →
-</div>
-
-</div>
-
-</a>
-
-
-<a class="card"
-href="12-sposobow-na-wiecej-miejsca-w-lazience.html">
-
-<div class="card-image">
-🚿
-</div>
-
-<div class="card-body">
-
-<div class="category">
-ŁAZIENKA
-</div>
-
-<h3>
-12 sposobów na więcej miejsca w łazience
-</h3>
-
-<p>
-Organizacja kosmetyków, ręczników
-i małej przestrzeni.
-</p>
-
-<div class="read">
-Czytaj artykuł →
-</div>
-
-</div>
-
-</a>
-
-
-<a class="card"
-href="jak-zorganizowac-mala-sypialnie.html">
-
-<div class="card-image">
-🛏️
-</div>
-
-<div class="card-body">
-
-<div class="category">
-SYPIALNIA
-</div>
-
-<h3>
-Jak zorganizować małą sypialnię?
-</h3>
-
-<p>
-Pomysły na przechowywanie
-i oszczędzanie miejsca.
-</p>
-
-<div class="read">
-Czytaj artykuł →
-</div>
-
-</div>
-
-</a>
-
-
-<a class="card"
-href="jak-wykorzystac-mala-szafe.html">
-
-<div class="card-image">
-👕
-</div>
-
-<div class="card-body">
-
-<div class="category">
-SZFA
-</div>
-
-<h3>
-10 sposobów na lepiej wykorzystaną szafę
-</h3>
-
-<p>
-Więcej miejsca na ubrania
-bez większej szafy.
-</p>
-
-<div class="read">
-Czytaj artykuł →
-</div>
-
-</div>
-
-</a>
-
-
-<a class="card"
-href="male-home-office.html">
-
-<div class="card-image">
-💻
-</div>
-
-<div class="card-body">
-
-<div class="category">
-HOME OFFICE
-</div>
-
-<h3>
-Małe biurko — jak stworzyć wygodne miejsce?
-</h3>
-
-<p>
-Organizacja małego stanowiska
-do pracy i nauki.
-</p>
-
-<div class="read">
-Czytaj artykuł →
-</div>
-
-</div>
-
-</a>
-
-
-<a class="card"
-href="sprytne-rozwiazania-do-malego-mieszkania.html">
-
-<div class="card-image">
-✨
-</div>
-
-<div class="card-body">
-
-<div class="category">
-SPRytne rozwiązania
-</div>
+<div class="category">1000RAYS</div>
 
 <h3>
 20 sprytnych rozwiązań do małego mieszkania
 </h3>
 
 <p>
-Pomysły, które pomagają
-lepiej wykorzystać przestrzeń.
+Pomysły na lepsze wykorzystanie małej przestrzeni.
 </p>
 
 <div class="read">
@@ -654,18 +511,109 @@ Czytaj artykuł →
 </div>
 
 </div>
+</div>
 
-</a>
 
+<div class="card" onclick="pokazArtykul(3)">
 
+<div class="card-image">🍳</div>
+
+<div class="card-body">
+
+<div class="category">KUCHNIA</div>
+
+<h3>
+Jak zorganizować małą kuchnię?
+</h3>
+
+<p>
+Więcej miejsca bez remontu.
+</p>
+
+<div class="read">
+Czytaj artykuł →
 </div>
 
 </div>
+</div>
 
+
+<div class="card" onclick="pokazArtykul(4)">
+
+<div class="card-image">🚿</div>
+
+<div class="card-body">
+
+<div class="category">ŁAZIENKA</div>
+
+<h3>
+12 sposobów na więcej miejsca w łazience
+</h3>
+
+<p>
+Prosta organizacja małej łazienki.
+</p>
+
+<div class="read">
+Czytaj artykuł →
+</div>
+
+</div>
+</div>
+
+
+<div class="card" onclick="pokazArtykul(5)">
+
+<div class="card-image">🛏️</div>
+
+<div class="card-body">
+
+<div class="category">SYPIALNIA</div>
+
+<h3>
+Jak zorganizować małą sypialnię?
+</h3>
+
+<p>
+Sprytne przechowywanie i więcej przestrzeni.
+</p>
+
+<div class="read">
+Czytaj artykuł →
+</div>
+
+</div>
+</div>
+
+
+<div class="card" onclick="pokazArtykul(6)">
+
+<div class="card-image">👕</div>
+
+<div class="card-body">
+
+<div class="category">SZAFA</div>
+
+<h3>
+10 sposobów na lepiej wykorzystaną szafę
+</h3>
+
+<p>
+Więcej miejsca bez kupowania większej szafy.
+</p>
+
+<div class="read">
+Czytaj artykuł →
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
 </section>
 
-
-<!-- PRODUKTY -->
 
 <section class="products-section" id="produkty">
 
@@ -678,8 +626,7 @@ Polecane produkty
 </h2>
 
 <p>
-Praktyczne rzeczy, które mogą pomóc
-w organizacji małego mieszkania.
+Praktyczne rzeczy do małych mieszkań.
 </p>
 
 </div>
@@ -690,23 +637,16 @@ w organizacji małego mieszkania.
 
 <div class="product">
 
-<div class="product-icon">
-🧺
-</div>
+<div class="product-icon">🧺</div>
 
-<h3>
-Organizer pod umywalkę
-</h3>
+<h3>Organizer pod umywalkę</h3>
 
 <p>
 Wykorzystaj przestrzeń pod umywalką.
 </p>
 
-<a href="#"
-class="amazon-button">
-
+<a href="#" class="amazon-button">
 Sprawdź na Amazon →
-
 </a>
 
 </div>
@@ -714,23 +654,16 @@ Sprawdź na Amazon →
 
 <div class="product">
 
-<div class="product-icon">
-📦
-</div>
+<div class="product-icon">📦</div>
 
-<h3>
-Pojemniki pod łóżko
-</h3>
+<h3>Pojemniki pod łóżko</h3>
 
 <p>
 Na pościel, koce i ubrania sezonowe.
 </p>
 
-<a href="#"
-class="amazon-button">
-
+<a href="#" class="amazon-button">
 Sprawdź na Amazon →
-
 </a>
 
 </div>
@@ -738,23 +671,16 @@ Sprawdź na Amazon →
 
 <div class="product">
 
-<div class="product-icon">
-👕
-</div>
+<div class="product-icon">👕</div>
 
-<h3>
-Organizery do szafy
-</h3>
+<h3>Organizery do szafy</h3>
 
 <p>
 Więcej porządku bez większej szafy.
 </p>
 
-<a href="#"
-class="amazon-button">
-
+<a href="#" class="amazon-button">
 Sprawdź na Amazon →
-
 </a>
 
 </div>
@@ -762,57 +688,354 @@ Sprawdź na Amazon →
 
 <div class="product">
 
-<div class="product-icon">
-🔌
-</div>
+<div class="product-icon">🔌</div>
 
-<h3>
-Organizer na kable
-</h3>
+<h3>Organizer na kable</h3>
 
 <p>
-Koniec z plątaniną kabli na biurku.
+Koniec z plątaniną kabli.
 </p>
 
-<a href="#"
-class="amazon-button">
-
+<a href="#" class="amazon-button">
 Sprawdź na Amazon →
-
 </a>
 
 </div>
 
 
 </div>
-
 </div>
-
 </section>
 
-
-<!-- INFO -->
 
 <section class="info">
 
 <div class="container">
 
 <h2>
-Mniej chaosu. Więcej miejsca.
+Mniej chaosu.<br>
+Więcej miejsca.
 </h2>
 
 <p>
-1000Rays powstało po to, żeby pokazywać
-proste i praktyczne sposoby na lepsze
-wykorzystanie małych mieszkań.
+1000Rays pokazuje proste i praktyczne
+sposoby na lepsze wykorzystanie małych mieszkań.
 </p>
 
 </div>
 
 </section>
 
+</div>
 
-<!-- FOOTER -->
+
+<!-- ARTYKUŁ 1 -->
+
+<section id="article1" class="article-page">
+
+<div class="container">
+
+<div class="article-content">
+
+<div class="back" onclick="pokazGlowna()">
+← Wróć do strony głównej
+</div>
+
+<h1>
+10 genialnych rzeczy do małego mieszkania
+</h1>
+
+<p class="intro">
+Małe mieszkanie nie musi oznaczać ciągłego
+potykania się o rzeczy. Kilka prostych rozwiązań
+potrafi naprawdę odzyskać sporo przestrzeni.
+</p>
+
+<h2>1. Organizery pod umywalkę</h2>
+
+<p>
+Przestrzeń pod umywalką często jest kompletnie
+niewykorzystana. Prosty organizer pozwala
+uporządkować kosmetyki, środki czystości i drobiazgi.
+</p>
+
+<h2>2. Pojemniki pod łóżko</h2>
+
+<p>
+Miejsce pod łóżkiem idealnie nadaje się do
+przechowywania rzeczy sezonowych.
+</p>
+
+<h2>3. Organizery do szafy</h2>
+
+<p>
+Zamiast upychać ubrania, warto podzielić przestrzeń
+na mniejsze sekcje.
+</p>
+
+<h2>4. Haczyki</h2>
+
+<p>
+Drzwi i ściany mogą zapewnić dodatkowe miejsce
+na torby, ręczniki czy akcesoria.
+</p>
+
+<div class="tip">
+💡 <strong>Tip 1000Rays:</strong>
+W małym mieszkaniu najpierw wykorzystuj
+przestrzeń pionową, a dopiero później dokładaj meble.
+</div>
+
+<h2>5–10. Małe rzeczy, duża różnica</h2>
+
+<p>
+Warto również rozważyć worki próżniowe,
+pudełka do szuflad, wąskie półki,
+wieszaki wielopoziomowe i organizery na kable.
+</p>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ARTYKUŁ 2 -->
+
+<section id="article2" class="article-page">
+
+<div class="container">
+
+<div class="article-content">
+
+<div class="back" onclick="pokazGlowna()">
+← Wróć do strony głównej
+</div>
+
+<h1>
+20 sprytnych rozwiązań do małego mieszkania
+</h1>
+
+<p class="intro">
+Nie potrzebujesz większego mieszkania.
+Potrzebujesz lepiej wykorzystać to,
+które już masz.
+</p>
+
+<h2>Wykorzystuj ściany</h2>
+
+<p>
+Półki ścienne, haczyki i organizery pozwalają
+przenieść część rzeczy z podłogi na ściany.
+</p>
+
+<h2>Wykorzystuj drzwi</h2>
+
+<p>
+Na drzwiach można zamontować organizery
+na kosmetyki, środki czystości czy akcesoria.
+</p>
+
+<h2>Wykorzystuj przestrzeń pod łóżkiem</h2>
+
+<p>
+To jedno z najlepszych miejsc na rzeczy,
+których nie używasz codziennie.
+</p>
+
+<div class="tip">
+💡 <strong>Zasada 1000Rays:</strong>
+Jeżeli jakaś przestrzeń stoi pusta,
+zastanów się, czy da się ją wykorzystać.
+</div>
+
+<h2>Małe zmiany</h2>
+
+<p>
+Nie trzeba robić generalnego remontu.
+Czasami kilka dobrze dobranych organizerów
+robi większą różnicę niż kolejny mebel.
+</p>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ARTYKUŁ 3 -->
+
+<section id="article3" class="article-page">
+
+<div class="container">
+
+<div class="article-content">
+
+<div class="back" onclick="pokazGlowna()">
+← Wróć do strony głównej
+</div>
+
+<h1>
+Jak zorganizować małą kuchnię?
+</h1>
+
+<p class="intro">
+Mała kuchnia wymaga dobrego wykorzystania
+szafek, ścian i blatów.
+</p>
+
+<h2>Wykorzystaj ścianę</h2>
+
+<p>
+Relingi, haczyki i półki mogą przejąć część
+rzeczy znajdujących się na blacie.
+</p>
+
+<h2>Porządkuj szuflady</h2>
+
+<p>
+Podział szuflad na mniejsze sekcje
+ułatwia utrzymanie porządku.
+</p>
+
+<h2>Nie zastawiaj blatu</h2>
+
+<p>
+W małej kuchni wolny blat jest na wagę złota.
+</p>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ARTYKUŁ 4 -->
+
+<section id="article4" class="article-page">
+
+<div class="container">
+
+<div class="article-content">
+
+<div class="back" onclick="pokazGlowna()">
+← Wróć do strony głównej
+</div>
+
+<h1>
+12 sposobów na więcej miejsca w łazience
+</h1>
+
+<p class="intro">
+Łazienka może być mała, ale nie musi być chaotyczna.
+</p>
+
+<h2>Wykorzystaj przestrzeń nad drzwiami</h2>
+
+<p>
+To dobre miejsce na rzeczy używane rzadziej.
+</p>
+
+<h2>Organizer pod umywalką</h2>
+
+<p>
+Pozwala wykorzystać przestrzeń,
+która często pozostaje pusta.
+</p>
+
+<h2>Haczyki</h2>
+
+<p>
+Dodatkowe haczyki mogą pomieścić ręczniki
+i drobne akcesoria.
+</p>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ARTYKUŁ 5 -->
+
+<section id="article5" class="article-page">
+
+<div class="container">
+
+<div class="article-content">
+
+<div class="back" onclick="pokazGlowna()">
+← Wróć do strony głównej
+</div>
+
+<h1>
+Jak zorganizować małą sypialnię?
+</h1>
+
+<p class="intro">
+W małej sypialni liczy się każdy centymetr.
+</p>
+
+<h2>Łóżko jako miejsce przechowywania</h2>
+
+<p>
+Wykorzystaj przestrzeń pod łóżkiem
+na rzeczy sezonowe.
+</p>
+
+<h2>Szafa</h2>
+
+<p>
+Wieszaki wielopoziomowe i organizery
+pomagają wykorzystać jej wysokość.
+</p>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ARTYKUŁ 6 -->
+
+<section id="article6" class="article-page">
+
+<div class="container">
+
+<div class="article-content">
+
+<div class="back" onclick="pokazGlowna()">
+← Wróć do strony głównej
+</div>
+
+<h1>
+10 sposobów na lepiej wykorzystaną szafę
+</h1>
+
+<p class="intro">
+Nie zawsze potrzebujesz większej szafy.
+Czasami wystarczy lepiej wykorzystać jej wnętrze.
+</p>
+
+<h2>Wieszaki wielopoziomowe</h2>
+
+<p>
+Pozwalają przechowywać kilka rzeczy
+na przestrzeni jednego wieszaka.
+</p>
+
+<h2>Organizery</h2>
+
+<p>
+Podział półek na mniejsze strefy
+ułatwia utrzymanie porządku.
+</p>
+
+</div>
+</div>
+
+</section>
+
 
 <footer>
 
@@ -824,27 +1047,45 @@ wykorzystanie małych mieszkań.
 1000Rays
 </div>
 
-<div class="footer-note">
+<p>
 Sprytne rozwiązania do małych przestrzeni.
-</div>
-
-</div>
-
-<div class="footer-links">
-
-<a href="#artykuly">
-Artykuły
-</a>
-
-<a href="#produkty">
-Produkty
-</a>
+</p>
 
 </div>
 
 </div>
 
 </footer>
+
+
+<script>
+
+function pokazArtykul(numer){
+
+    document.getElementById("glowna").style.display="none";
+
+    document.querySelectorAll(".article-page").forEach(function(el){
+        el.classList.remove("active");
+    });
+
+    document.getElementById("article"+numer).classList.add("active");
+
+    window.scrollTo(0,0);
+}
+
+
+function pokazGlowna(){
+
+    document.querySelectorAll(".article-page").forEach(function(el){
+        el.classList.remove("active");
+    });
+
+    document.getElementById("glowna").style.display="block";
+
+    window.scrollTo(0,0);
+}
+
+</script>
 
 
 </body>
