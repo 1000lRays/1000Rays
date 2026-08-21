@@ -7,6 +7,7 @@
 <title>1000Rays — Małe mieszkania, wielkie pomysły</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -29,6 +30,10 @@ a{
     color:inherit;
 }
 
+button{
+    font-family:inherit;
+}
+
 .container{
     width:92%;
     max-width:1100px;
@@ -36,7 +41,9 @@ a{
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:#111827;
@@ -79,7 +86,9 @@ nav a:hover{
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     padding:90px 0;
@@ -133,7 +142,9 @@ nav a:hover{
 }
 
 
-/* SEKCJE */
+/* =========================
+   SEKCJE
+========================= */
 
 section{
     padding:70px 0;
@@ -152,7 +163,9 @@ section{
 }
 
 
-/* ARTYKUŁY */
+/* =========================
+   ARTYKUŁY
+========================= */
 
 .articles{
     display:grid;
@@ -212,7 +225,9 @@ section{
 }
 
 
-/* ARTYKUŁ */
+/* =========================
+   STRONA ARTYKUŁU
+========================= */
 
 .article-page{
     display:none;
@@ -268,64 +283,147 @@ section{
 }
 
 
-/* PRODUKTY */
+/* =========================
+   PRODUKTY NA STRONIE
+========================= */
 
 .products-section{
     background:white;
 }
 
-.products{
+.product-category-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
-.product{
+.product-category{
     background:#f8fafc;
     border:1px solid #e2e8f0;
     border-radius:16px;
     padding:22px;
+    cursor:pointer;
     transition:.2s;
 }
 
-.product:hover{
+.product-category:hover{
     transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(0,0,0,.07);
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
 }
 
-.product-icon{
+.category-icon{
     font-size:45px;
     margin-bottom:12px;
 }
 
-.product h3{
+.product-category h3{
     font-size:18px;
     margin-bottom:8px;
 }
 
-.product p{
+.product-category p{
     color:#64748b;
     font-size:13px;
-    margin-bottom:18px;
+    margin-bottom:15px;
 }
 
-.amazon-button{
-    display:block;
-    text-align:center;
-    background:#111827;
-    color:white;
-    padding:11px;
-    border-radius:8px;
-    font-size:13px;
+.product-count{
+    display:inline-block;
+    background:#e0f2fe;
+    color:#0284c7;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:12px;
     font-weight:bold;
 }
 
-.amazon-button:hover{
+
+/* =========================
+   WIDOK LISTY PRODUKTÓW
+========================= */
+
+.products-page{
+    display:none;
+    background:white;
+    min-height:70vh;
+}
+
+.products-page.active{
+    display:block;
+}
+
+.products-page-content{
+    max-width:1000px;
+    margin:auto;
+}
+
+.products-page-title{
+    margin-bottom:35px;
+}
+
+.products-page-title h1{
+    font-size:clamp(35px,6vw,55px);
+    line-height:1.1;
+    margin-bottom:12px;
+}
+
+.products-page-title p{
+    color:#64748b;
+    font-size:18px;
+}
+
+.products-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.product-item{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-item-icon{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.product-item h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.product-item p{
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:20px;
+    flex-grow:1;
+}
+
+.product-button{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:#111827;
+    color:white;
+    padding:13px;
+    border-radius:9px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.product-button:hover{
     background:#0284c7;
 }
 
 
-/* INFO */
+/* =========================
+   INFO
+========================= */
 
 .info{
     background:#111827;
@@ -343,7 +441,9 @@ section{
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#020617;
@@ -358,7 +458,9 @@ footer{
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px){
 
@@ -366,8 +468,12 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .products{
+    .product-category-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .products-list{
+        grid-template-columns:1fr;
     }
 }
 
@@ -389,18 +495,29 @@ footer{
         font-size:17px;
     }
 
-    .articles,
-    .products{
+    .articles{
+        grid-template-columns:1fr;
+    }
+
+    .product-category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .products-list{
         grid-template-columns:1fr;
     }
 }
+
 </style>
 </head>
+
 
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -411,13 +528,15 @@ footer{
 </a>
 
 <nav>
+
 <a href="#" onclick="pokazGlowna();return false;">
 Artykuły
 </a>
 
-<a href="#produkty">
+<a href="#produkty" onclick="pokazGlowna();">
 Produkty
 </a>
+
 </nav>
 
 </div>
@@ -426,13 +545,11 @@ Produkty
 
 
 <!-- =========================
-     STRONA GŁÓWNA
+     GŁÓWNA
 ========================= -->
 
 <div id="glowna">
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -465,7 +582,9 @@ Zobacz poradniki →
 </section>
 
 
-<!-- ARTYKUŁY -->
+<!-- =========================
+     ARTYKUŁY
+========================= -->
 
 <section id="artykuly">
 
@@ -664,23 +783,22 @@ Polecane produkty
 </h2>
 
 <p>
-Praktyczne rzeczy do małych mieszkań.
+Wybierz kategorię i zobacz dostępne produkty.
 </p>
 
 </div>
 
 
-<!-- TUTAJ JAVASCRIPT AUTOMATYCZNIE WSTAWI WSZYSTKIE PRODUKTY -->
+<div id="productCategories" class="product-category-grid">
 
-<div class="products" id="listaProduktow"></div>
+<!-- TU JAVASCRIPT WSTAWI KATEGORIE -->
 
+</div>
 
 </div>
 
 </section>
 
-
-<!-- INFO -->
 
 <section class="info">
 
@@ -701,6 +819,43 @@ na lepsze wykorzystanie małych mieszkań.
 </section>
 
 </div>
+
+
+<!-- =========================
+     STRONA PRODUKTÓW
+========================= -->
+
+<section id="productsPage" class="products-page">
+
+<div class="container">
+
+<div class="products-page-content">
+
+<div class="back" onclick="pokazGlowna()">
+← Wróć do strony głównej
+</div>
+
+<div class="products-page-title">
+
+<h1 id="productsTitle">
+Produkty
+</h1>
+
+<p id="productsDescription">
+Polecane produkty 1000Rays.
+</p>
+
+</div>
+
+<div id="productsList" class="products-list">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
 <!-- =========================
@@ -765,8 +920,7 @@ i przechowywać więcej ubrań.
 
 <h2>7. Worki próżniowe</h2>
 <p>
-Idealne do ubrań zimowych, koców
-i pościeli sezonowej.
+Idealne do ubrań zimowych, koców i pościeli.
 </p>
 
 <h2>8. Organizer na kable</h2>
@@ -794,6 +948,7 @@ Najpierw wykorzystuj przestrzeń pionową,
 </div>
 
 </div>
+
 </div>
 
 </section>
@@ -819,15 +974,14 @@ Najpierw wykorzystuj przestrzeń pionową,
 
 <p class="intro">
 Małe mieszkanie wymaga trochę kombinowania.
-Poniżej masz 20 praktycznych pomysłów,
-które pomagają wykorzystać przestrzeń.
+Poniżej masz 20 praktycznych pomysłów.
 </p>
 
 <h2>1. Półki ścienne</h2>
 <p>Wykorzystują pionową przestrzeń.</p>
 
 <h2>2. Organizery pod łóżko</h2>
-<p>Idealne na pościel, koce i ubrania sezonowe.</p>
+<p>Idealne miejsce na pościel i ubrania sezonowe.</p>
 
 <h2>3. Haczyki na drzwiach</h2>
 <p>Na torby, ręczniki i akcesoria.</p>
@@ -836,16 +990,16 @@ które pomagają wykorzystać przestrzeń.
 <p>Wykorzystują wysokość szafy.</p>
 
 <h2>5. Pojemniki do szuflad</h2>
-<p>Dzielą szuflady na mniejsze strefy.</p>
+<p>Dzielą duże szuflady na mniejsze strefy.</p>
 
 <h2>6. Składany stół</h2>
-<p>Po użyciu można go złożyć.</p>
+<p>Możesz go złożyć, kiedy nie jest potrzebny.</p>
 
 <h2>7. Łóżko z pojemnikiem</h2>
-<p>Daje dodatkową przestrzeń do przechowywania.</p>
+<p>Łóżko może być jednocześnie schowkiem.</p>
 
 <h2>8. Organizer pod umywalkę</h2>
-<p>Wykorzystuje puste miejsce.</p>
+<p>Wykorzystuje pustą przestrzeń.</p>
 
 <h2>9. Reling kuchenny</h2>
 <p>Przenosi przybory z blatu na ścianę.</p>
@@ -863,25 +1017,25 @@ które pomagają wykorzystać przestrzeń.
 <p>Zmniejszają objętość ubrań i pościeli.</p>
 
 <h2>14. Stolik ze schowkiem</h2>
-<p>Łączy funkcję mebla i przechowywania.</p>
+<p>Daje dodatkowe miejsce bez kolejnego mebla.</p>
 
 <h2>15. Składane krzesła</h2>
-<p>Można je schować, gdy nie są potrzebne.</p>
+<p>Można je schować, kiedy nie są potrzebne.</p>
 
 <h2>16. Organizer na kable</h2>
 <p>Koniec z kablowym spaghetti.</p>
 
 <h2>17. Przestrzeń nad szafą</h2>
-<p>Dobre miejsce na rzeczy używane rzadko.</p>
+<p>Można tam przechowywać rzeczy używane rzadko.</p>
 
 <h2>18. Lustro z szafką</h2>
-<p>Lustro może jednocześnie być schowkiem.</p>
+<p>Lustro może być jednocześnie schowkiem.</p>
 
-<h2>19. Kosze do segregowania</h2>
-<p>Pomagają uporządkować drobiazgi.</p>
+<h2>19. Kosze</h2>
+<p>Pomagają ograniczyć wizualny chaos.</p>
 
 <h2>20. Meble wielofunkcyjne</h2>
-<p>Pufa, łóżko czy stolik mogą pełnić kilka funkcji.</p>
+<p>Jeden mebel może pełnić kilka funkcji.</p>
 
 <div class="tip">
 💡 <strong>Zasada 1000Rays:</strong>
@@ -891,11 +1045,12 @@ Każda rzecz powinna mieć swoje miejsce.
 <h2>Podsumowanie</h2>
 
 <p>
-Nie musisz wdrażać wszystkich pomysłów jednego dnia.
+Nie musisz wdrażać wszystkich pomysłów naraz.
 Wybierz kilka i zacznij od nich.
 </p>
 
 </div>
+
 </div>
 
 </section>
@@ -928,37 +1083,37 @@ Kluczem jest dobre wykorzystanie przestrzeni.
 <p>Półki i relingi pozwalają zwolnić blat.</p>
 
 <h2>2. Zamontuj reling</h2>
-<p>Możesz zawiesić na nim przybory kuchenne.</p>
+<p>Zawieś na nim przybory kuchenne.</p>
 
 <h2>3. Uporządkuj szuflady</h2>
 <p>Organizery pomagają utrzymać porządek.</p>
 
 <h2>4. Wykorzystaj drzwi szafek</h2>
-<p>Wewnętrzna strona drzwiczek może pomieścić małe akcesoria.</p>
+<p>Wewnętrzna strona drzwiczek może służyć jako schowek.</p>
 
 <h2>5. Używaj pionowych organizerów</h2>
-<p>Deski i pokrywki można przechowywać pionowo.</p>
+<p>Deski i pokrywki możesz przechowywać pionowo.</p>
 
 <h2>6. Ogranicz rzeczy na blacie</h2>
 <p>Wolny blat sprawia, że kuchnia wygląda na większą.</p>
 
 <h2>7. Wykorzystaj narożniki</h2>
-<p>Organizery obrotowe pomagają wykorzystać głębokie szafki.</p>
+<p>Obrotowe organizery pomagają wykorzystać głębokie szafki.</p>
 
 <h2>8. Grupuj produkty</h2>
-<p>Podobne produkty trzymaj razem.</p>
+<p>Trzymaj podobne produkty razem.</p>
 
 <h2>9. Wybieraj składane akcesoria</h2>
-<p>Składane miski i pojemniki zajmują mniej miejsca.</p>
+<p>Zajmują mniej miejsca po użyciu.</p>
 
 <h2>10. Wykorzystaj przestrzeń nad szafkami</h2>
-<p>To dobre miejsce na rzeczy używane sporadycznie.</p>
+<p>Przechowuj tam rzeczy używane sporadycznie.</p>
 
 <h2>11. Zadbaj o porządek w lodówce</h2>
 <p>Pojemniki pomagają wykorzystać wysokość półek.</p>
 
 <h2>12. Pozbądź się duplikatów</h2>
-<p>Nie trzymaj kilku rzeczy, których praktycznie nie używasz.</p>
+<p>Nie trzymaj kilku takich samych rzeczy, jeśli ich nie potrzebujesz.</p>
 
 <div class="tip">
 💡 <strong>Tip 1000Rays:</strong>
@@ -966,6 +1121,7 @@ W małej kuchni wolny blat jest na wagę złota.
 </div>
 
 </div>
+
 </div>
 
 </section>
@@ -990,26 +1146,27 @@ W małej kuchni wolny blat jest na wagę złota.
 </h1>
 
 <p class="intro">
-Łazienka może być mała, ale nie musi wyglądać jak magazyn.
+Łazienka może być mała, ale dzięki dobremu przechowywaniu
+nie musi wyglądać jak magazyn.
 </p>
 
 <h2>1. Organizer pod umywalką</h2>
 <p>Wykorzystaj przestrzeń pod umywalką.</p>
 
 <h2>2. Haczyki na ręczniki</h2>
-<p>Zajmują mniej miejsca niż stojak.</p>
+<p>Zajmują mniej miejsca niż duży stojak.</p>
 
 <h2>3. Organizer pod prysznic</h2>
 <p>Wykorzystuje pionową przestrzeń.</p>
 
 <h2>4. Półka nad drzwiami</h2>
-<p>Dobre miejsce na zapasowe ręczniki.</p>
+<p>Na zapasowe ręczniki i rzeczy używane rzadko.</p>
 
 <h2>5. Wykorzystaj drzwi</h2>
 <p>Organizer na drzwiach może pomieścić kosmetyki.</p>
 
 <h2>6. Wąska szafka</h2>
-<p>Wykorzystuje niewielką wolną przestrzeń.</p>
+<p>Wykorzystuje małą wolną przestrzeń.</p>
 
 <h2>7. Pudełka na kosmetyki</h2>
 <p>Segregują kosmetyki według rodzaju.</p>
@@ -1021,13 +1178,13 @@ W małej kuchni wolny blat jest na wagę złota.
 <p>Wysokie półki pozwalają przechowywać więcej.</p>
 
 <h2>10. Lustro z szafką</h2>
-<p>Łączy lustro z dodatkowym schowkiem.</p>
+<p>Łączy lustro z miejscem do przechowywania.</p>
 
 <h2>11. Pojemniki zamykane</h2>
-<p>Pomagają ograniczyć wizualny chaos.</p>
+<p>Ograniczają wizualny chaos.</p>
 
 <h2>12. Ogranicz zapasy</h2>
-<p>Nie przechowuj więcej, niż naprawdę potrzebujesz.</p>
+<p>Nie przechowuj ogromnej ilości produktów.</p>
 
 <div class="tip">
 💡 <strong>Tip 1000Rays:</strong>
@@ -1035,6 +1192,7 @@ W małej łazience przechowywanie pionowe robi największą różnicę.
 </div>
 
 </div>
+
 </div>
 
 </section>
@@ -1064,19 +1222,19 @@ a nie składowiskiem rzeczy.
 </p>
 
 <h2>1. Wykorzystaj przestrzeń pod łóżkiem</h2>
-<p>Przechowuj tam pościel, koce i ubrania sezonowe.</p>
+<p>Na pościel, koce i ubrania sezonowe.</p>
 
 <h2>2. Wybierz łóżko z pojemnikiem</h2>
 <p>Zyskujesz dużą przestrzeń do przechowywania.</p>
 
 <h2>3. Wykorzystaj ściany</h2>
-<p>Półki ścienne mogą zastąpić duże szafki.</p>
+<p>Półki ścienne mogą zastąpić stoliki.</p>
 
 <h2>4. Zamontuj haczyki</h2>
-<p>Torby i ubrania mogą mieć swoje miejsce.</p>
+<p>Na torby i ubrania.</p>
 
 <h2>5. Uporządkuj szafę</h2>
-<p>Organizery pozwalają wykorzystać jej wysokość.</p>
+<p>Organizery wykorzystują jej wysokość.</p>
 
 <h2>6. Wybierz wąską szafkę nocną</h2>
 <p>Nie potrzebujesz dużej komody.</p>
@@ -1088,10 +1246,10 @@ a nie składowiskiem rzeczy.
 <p>Kilka dodatków często wygląda lepiej niż dziesiątki.</p>
 
 <h2>9. Wprowadź pudełka</h2>
-<p>Pomagają uporządkować małe akcesoria.</p>
+<p>Pomagają uporządkować drobiazgi.</p>
 
 <h2>10. Zostaw wolną podłogę</h2>
-<p>Wolna podłoga optycznie powiększa pomieszczenie.</p>
+<p>Mniej rzeczy na podłodze = optycznie więcej przestrzeni.</p>
 
 <div class="tip">
 💡 <strong>Tip 1000Rays:</strong>
@@ -1099,6 +1257,7 @@ W sypialni mniej rzeczy często oznacza więcej spokoju.
 </div>
 
 </div>
+
 </div>
 
 </section>
@@ -1124,14 +1283,15 @@ W sypialni mniej rzeczy często oznacza więcej spokoju.
 
 <p class="intro">
 Nie zawsze potrzebujesz większej szafy.
-Najpierw wykorzystaj tę, którą już masz.
+Najpierw wykorzystaj całą przestrzeń wewnątrz tej,
+którą już masz.
 </p>
 
 <h2>1. Wieszaki wielopoziomowe</h2>
 <p>Pozwalają przechowywać więcej ubrań.</p>
 
 <h2>2. Organizery półkowe</h2>
-<p>Dzielą wysokie półki na mniejsze poziomy.</p>
+<p>Dzielą wysokie półki.</p>
 
 <h2>3. Pudełka</h2>
 <p>Idealne na akcesoria i rzeczy sezonowe.</p>
@@ -1140,13 +1300,13 @@ Najpierw wykorzystaj tę, którą już masz.
 <p>Zmniejszają objętość ubrań.</p>
 
 <h2>5. Haczyki</h2>
-<p>Możesz wykorzystać boki szafy na dodatki.</p>
+<p>Wykorzystują boczne elementy szafy.</p>
 
 <h2>6. Grupowanie ubrań</h2>
-<p>Podziel ubrania według rodzaju lub sezonu.</p>
+<p>Ułatwia znalezienie potrzebnych rzeczy.</p>
 
 <h2>7. Składanie pionowe</h2>
-<p>Ułatwia zobaczenie wszystkich rzeczy.</p>
+<p>Pozwala zobaczyć wszystkie rzeczy jednocześnie.</p>
 
 <h2>8. Organizer na drzwi</h2>
 <p>Drzwi szafy mogą przejąć drobne akcesoria.</p>
@@ -1163,12 +1323,15 @@ Najpierw wykorzystaj wysokość, głębokość i drzwi szafy.
 </div>
 
 </div>
+
 </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1194,87 +1357,28 @@ Sprytne rozwiązania do małych przestrzeni.
 <script src="produkty.js"></script>
 
 
+<!-- =========================
+     JAVASCRIPT STRONY
+========================= -->
+
 <script>
 
-/* =========================
-   POKAZYWANIE PRODUKTÓW
-========================= */
-
-function pokazProdukty(){
-
-    const kontener = document.getElementById("listaProduktow");
-
-    if(!kontener){
-        return;
-    }
-
-    if(typeof produkty === "undefined"){
-
-        kontener.innerHTML = `
-            <p style="
-                grid-column:1/-1;
-                padding:20px;
-                background:#fee2e2;
-                color:#991b1b;
-                border-radius:10px;
-            ">
-                Nie udało się wczytać pliku produkty.js.
-                Sprawdź, czy plik znajduje się obok index.html.
-            </p>
-        `;
-
-        return;
-    }
-
-    Object.values(produkty).forEach(function(produkt){
-
-        const karta = document.createElement("div");
-
-        karta.className = "product";
-
-        karta.innerHTML = `
-            <div class="product-icon">
-                ${produkt.emoji}
-            </div>
-
-            <h3>
-                ${produkt.nazwa}
-            </h3>
-
-            <p>
-                ${produkt.opis}
-            </p>
-
-            <a
-                href="${produkt.link}"
-                class="amazon-button"
-                target="_blank"
-                rel="nofollow sponsored"
-            >
-                Sprawdź na Amazon →
-            </a>
-        `;
-
-        kontener.appendChild(karta);
-
-    });
-
-}
-
 
 /* =========================
-   ARTYKUŁY
+   POKAZ ARTYKUŁ
 ========================= */
 
 function pokazArtykul(numer){
 
     document.getElementById("glowna").style.display="none";
 
+    document.getElementById("productsPage").classList.remove("active");
+
     document.querySelectorAll(".article-page").forEach(function(el){
         el.classList.remove("active");
     });
 
-    const artykul=document.getElementById("article"+numer);
+    var artykul=document.getElementById("article"+numer);
 
     if(artykul){
         artykul.classList.add("active");
@@ -1285,7 +1389,7 @@ function pokazArtykul(numer){
 
 
 /* =========================
-   STRONA GŁÓWNA
+   POKAZ GŁÓWNĄ
 ========================= */
 
 function pokazGlowna(){
@@ -1294,6 +1398,8 @@ function pokazGlowna(){
         el.classList.remove("active");
     });
 
+    document.getElementById("productsPage").classList.remove("active");
+
     document.getElementById("glowna").style.display="block";
 
     window.scrollTo(0,0);
@@ -1301,16 +1407,210 @@ function pokazGlowna(){
 
 
 /* =========================
+   GENEROWANIE KATEGORII
+========================= */
+
+function pokazKategorieProduktow(){
+
+    var kontener=document.getElementById("productCategories");
+
+    if(!kontener){
+        return;
+    }
+
+    kontener.innerHTML="";
+
+    if(typeof produkty==="undefined"){
+        kontener.innerHTML=
+        "<p>Nie udało się wczytać pliku produkty.js.</p>";
+        return;
+    }
+
+
+    Object.keys(produkty).forEach(function(klucz){
+
+        var kategoria=produkty[klucz];
+
+        var liczbaProduktow=
+            Array.isArray(kategoria.produkty)
+            ? kategoria.produkty.length
+            : 0;
+
+
+        var kafelek=document.createElement("div");
+
+        kafelek.className="product-category";
+
+        kafelek.onclick=function(){
+
+            pokazProdukty(klucz);
+
+        };
+
+
+        kafelek.innerHTML=`
+
+            <div class="category-icon">
+                ${kategoria.emoji || "📦"}
+            </div>
+
+            <h3>
+                ${kategoria.nazwa}
+            </h3>
+
+            <p>
+                Zobacz polecane produkty z tej kategorii.
+            </p>
+
+            <span class="product-count">
+                ${liczbaProduktow}
+                ${liczbaProduktow === 1 ? "produkt" : "produktów"}
+                →
+            </span>
+
+        `;
+
+
+        kontener.appendChild(kafelek);
+
+    });
+
+}
+
+
+/* =========================
+   POKAZ PRODUKTY
+========================= */
+
+function pokazProdukty(klucz){
+
+    if(typeof produkty==="undefined"){
+        alert("Nie znaleziono pliku produkty.js.");
+        return;
+    }
+
+
+    var kategoria=produkty[klucz];
+
+
+    if(!kategoria){
+        return;
+    }
+
+
+    document.getElementById("glowna").style.display="none";
+
+
+    document.querySelectorAll(".article-page").forEach(function(el){
+        el.classList.remove("active");
+    });
+
+
+    var productsPage=
+        document.getElementById("productsPage");
+
+
+    productsPage.classList.add("active");
+
+
+    document.getElementById("productsTitle").innerHTML=
+        (kategoria.emoji || "📦")
+        + " "
+        + kategoria.nazwa;
+
+
+    document.getElementById("productsDescription").innerHTML=
+        "Polecane produkty 1000Rays — "
+        + kategoria.produkty.length
+        + " "
+        + (kategoria.produkty.length === 1
+            ? "produkt"
+            : "produktów")
+        + ".";
+
+
+    var lista=
+        document.getElementById("productsList");
+
+
+    lista.innerHTML="";
+
+
+    kategoria.produkty.forEach(function(produkt){
+
+        var item=document.createElement("div");
+
+        item.className="product-item";
+
+
+        var link=
+            produkt.link &&
+            produkt.link !== "#" &&
+            !produkt.link.includes("TU_WKLEJ_LINK")
+            ? produkt.link
+            : "#";
+
+
+        item.innerHTML=`
+
+            <div class="product-item-icon">
+                ${produkt.emoji || "📦"}
+            </div>
+
+            <h3>
+                ${produkt.nazwa}
+            </h3>
+
+            <p>
+                ${produkt.opis}
+            </p>
+
+            ${
+                link !== "#"
+                ?
+                `<a
+                    href="${link}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="product-button"
+                >
+                    Sprawdź produkt →
+                </a>`
+                :
+                `<span
+                    class="product-button"
+                    style="opacity:.5;cursor:default;"
+                >
+                    Link wkrótce →
+                </span>`
+            }
+
+        `;
+
+
+        lista.appendChild(item);
+
+    });
+
+
+    window.scrollTo(0,0);
+
+}
+
+
+/* =========================
    START
 ========================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded",function(){
 
-    pokazProdukty();
+    pokazKategorieProduktow();
 
 });
 
+
 </script>
+
 
 </body>
 </html>
