@@ -4,7 +4,7 @@ const produkty = {
         nazwa: "Organizer pod umywalkę",
         opis: "Praktyczny sposób na wykorzystanie miejsca pod umywalką.",
         emoji: "🧺",
-        link: "#https://link.amazon/B0f0bdMkw"
+        link: "https://link.amazon/B0f0bdMkw"
     },
 
     pojemnikiPodLozko: {
